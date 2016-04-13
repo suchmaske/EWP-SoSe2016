@@ -56,3 +56,48 @@ body:after {
 #cc-logo {
   height: 2em;
 }
+
+.reveal table thead th,
+.reveal table tbody tr{
+  border-bottom: 1px solid $mainColor;
+}
+
+.reveal table tbody tr:last-child {
+  border-bottom: none;
+}
+
+// Code Example containers
+
+.Code-Example {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid black !important;
+}
+
+.Code-Example__Code,
+.Code-Example__Result {
+  flex: 1;
+}
+
+.Code-Example__Code > pre {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+.Code-Example__Code > pre > code {
+  height : 100%;
+  padding: 0
+}
+
+.Code-Example__Result  {
+  border: 1px solid black !important;
+}
+
+.Code-Example__Result ol {
+  padding-left: 0.5em;
+}
+
+tr.highlight {
+  background: gray;
+}
