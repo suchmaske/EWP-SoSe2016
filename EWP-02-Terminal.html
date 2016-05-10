@@ -165,28 +165,12 @@
 
 					<h2>Auswertung: Editoren</h2>
 
-					<canvas class="stretch" data-chart="line">
-						My first dataset, 65, 59, 80, 81, 56, 55, 40
-						<!-- This is a comment that will be ignored -->
-						My second dataset, 28, 48, 40, 19, 86, 27, 90
+					<canvas class="stretch" data-chart="pie">
+						Editoren, 9, 8, 3, 2, 1, 1, 1
 						<!--
                         {
                          "data" : {
-                          "labels" : ["Enero", "Febrero", "Marzo", "Avril", "Mayo", "Junio", "Julio"],
-                          "datasets" : [{ "borderColor": "#0f0", "borderDash": ["5","10"] }, { "borderColor": "#0ff" } ]
-                         }
-                        }
-                        -->
-					</canva
-
-
-
-					<script>
-
-
-						/*
-						let editorPieData = [9, 8, 3, 2, 1, 1, 1];
-						let editorPieLabels = [
+                          "labels" : [
 								"Notepad++",
 								"Sublime Text",
 								"PhpStorm",
@@ -194,18 +178,15 @@
 								"Vim",
 								"WebStorm",
 								"Dreamweaver"
-						];
+						],
+                          "datasets" : [{ "borderColor": "#0f0", "borderDash": ["5","10"] }, { "borderColor": "#0ff" } ]
+                         }
+                        }
+                        -->
+					</canvas>
 
-						let ctx = $("#editorPieChart");
 
-						let editorPieChart = new Chart(ctx, {
-							type: "pie",
-							data: editorPieData,
-							labels : editorPieLabels
-						});
-						*/
 
-					</script>
 
 				</section>
 
@@ -659,7 +640,8 @@ Linux oli 4.4.0-21-generic #37-Ubuntu SMP Mon Apr 18 18:33:37 UTC 2016 x86_64 x8
 					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
 					{ src: 'plugin/zoom-js/zoom.js', async: true },
 					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/chart/Chart.min.js'}
+					{ src: 'plugin/chart/Chart.min.js' },
+					{ src: 'plugin/chart/csv2chart.js' },
 				],
 
 				chart: {
@@ -678,7 +660,7 @@ Linux oli 4.4.0-21-generic #37-Ubuntu SMP Mon Apr 18 18:33:37 UTC 2016 x86_64 x8
 					},
 					line: { borderColor: [ "rgba(20,220,220,.8)" , "rgba(220,120,120,.8)", "rgba(20,120,220,.8)" ], "borderDash": [ [5,10], [0,0] ]},
 					bar: { backgroundColor: [ "rgba(20,220,220,.8)" , "rgba(220,120,120,.8)", "rgba(20,120,220,.8)" ]},
-					pie: { backgroundColor: [ ["rgba(0,0,0,.8)" , "rgba(220,20,20,.8)", "rgba(20,220,20,.8)", "rgba(220,220,20,.8)", "rgba(20,20,220,.8)"] ]},
+					pie: { backgroundColor: [ ["rgba(0,0,0,.8)" , "rgba(220,20,20,.8)", "rgba(20,220,20,.8)", "rgba(220,220,20,.8)", "rgba(20,20,220,.8)", "rgba(252,158,206, 0.8)"] ]},
 					radar: { borderColor: [ "rgba(20,220,220,.8)" , "rgba(220,120,120,.8)", "rgba(20,120,220,.8)" ]},
 				},
 
