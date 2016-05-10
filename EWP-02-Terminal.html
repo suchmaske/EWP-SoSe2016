@@ -1,0 +1,692 @@
+<!doctype html>
+<html lang="de">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>EWP: Terminal</title>
+
+		<meta name="description" content="Einführung in die Webprogrammierung SoSe 2016. Sitzung 1: HTML">
+		<meta name="author" content="Oliver Pohl">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/ibi.css" id="theme">
+		<link rel="stylesheet" href="css/theme/01.css">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+
+		<script src="js/jquery-1.11.1.min.js"></script>
+		<script src="js/ibi.js"></script>
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+
+				<section>
+
+					<h2>Einführung in die Webprogrammierung</h2>
+					<h4>Sitzung 02: Terminal </h4>
+					<h4>Oliver Pohl: <a href="mailto:opohl@bbaw.de">opohl@bbaw.de</a></h4>
+
+				</section>
+
+				<section>
+
+					<section>
+						<h2>Agenda: Terminal</h2>
+
+						<ul>
+							<li>Wiederholung: HTML</li>
+							<li>Terminal vs. GUI</li>
+							<li>Bash vs. CMD</li>
+							<li>Terminal-Befehle</li>
+							<li>Tools</li>
+							<li>Mehr HTML</li>
+						</ul>
+					</section>
+
+					<section>
+
+						<h2>Neues</h2>
+
+						<p>Anonyme Fragen unter:</p>
+
+						<p><a href="http://telotadev.bbaw.de/ewp-helper/questions">http://goo.gl/dDkMeL</a></p>
+
+					</section>
+
+				</section>
+
+				<section>
+
+					<section>
+
+						<h2>Wiederholung: HTML</h2>
+
+					</section>
+
+					<section>
+						<h2>Elemente?</h2>
+						<p>Dokument Struktur verleihen</p>
+						<p>HTML-Bausteine aus 3 Bestandteilen</p>
+
+						<table>
+							<thead>
+							<tr>
+								<th>Start-Tag</th>
+								<th>Inhalt</th>
+								<th>End-Tag</th>
+							</tr>
+							</thead>
+							<tbody>
+							<tr>
+								<td>&lt;h1&gt;</td>
+								<td>Überschrift 1</td>
+								<td>&lt;/h1&gt;</td>
+							</tr>
+							<tr>
+								<td>&lt;p&gt;</td>
+								<td>Absatz</td>
+								<td>&lt;/p&gt;</td>
+							</tr>
+							</tbody>
+						</table>
+
+					</section>
+
+					<section>
+
+						<h2>Aufbau eines HTML-Dokuments</h2>
+
+						<img src="img/01/html-robo.svg" alt="" id="html-robo">
+
+					</section>
+
+					<section>
+
+						<h2>Attribute</h2>
+
+						<p>Zusatzinformation im HTML-Element</p>
+
+						<table>
+							<thead>
+							<tr>
+								<th>Element</th>
+								<th>Attributsname</th>
+								<th>Attributswert</th>
+							</tr>
+							</thead>
+							<tbody>
+							<tr>
+								<td>a</td>
+								<td>href</td>
+								<td>www.hu-berlin.de</td>
+							</tr>
+							<tr>
+								<td>img</td>
+								<td>src</td>
+								<td>img/hu-logo-small.png</td>
+							</tr>
+							</tbody>
+						</table>
+
+						<b>attributsname="attributswert"</b>
+
+						<pre><code><a href="https://www.google.de" id="link">Link zu Google</a></code></pre>
+
+					</section>
+
+				</section>
+
+				<section>
+
+					<h2>Auswertung: Editoren</h2>
+
+					<canvas class="stretch" data-chart="line">
+						My first dataset, 65, 59, 80, 81, 56, 55, 40
+						<!-- This is a comment that will be ignored -->
+						My second dataset, 28, 48, 40, 19, 86, 27, 90
+						<!--
+                        {
+                         "data" : {
+                          "labels" : ["Enero", "Febrero", "Marzo", "Avril", "Mayo", "Junio", "Julio"],
+                          "datasets" : [{ "borderColor": "#0f0", "borderDash": ["5","10"] }, { "borderColor": "#0ff" } ]
+                         }
+                        }
+                        -->
+					</canva
+
+
+
+					<script>
+
+
+						/*
+						let editorPieData = [9, 8, 3, 2, 1, 1, 1];
+						let editorPieLabels = [
+								"Notepad++",
+								"Sublime Text",
+								"PhpStorm",
+								"TextWrangler",
+								"Vim",
+								"WebStorm",
+								"Dreamweaver"
+						];
+
+						let ctx = $("#editorPieChart");
+
+						let editorPieChart = new Chart(ctx, {
+							type: "pie",
+							data: editorPieData,
+							labels : editorPieLabels
+						});
+						*/
+
+					</script>
+
+				</section>
+
+				<section>
+
+					<section>
+						<h2>Warmup</h2>
+
+						<p>10 Minuten</p>
+
+						<p>Terminal Vokabeln üben</p>
+					</section>
+
+					<section>
+
+						<h2>Warmup</h2>
+
+						<p>5 Minuten</p>
+
+						<p>Terminal-Befehle hier eintragen: </p>
+
+						<p><a href="http://telotadev.bbaw.de/ewp-helper/terminal" target="_blank">http://goo.gl/VGxh2B</a></p>
+
+					</section>
+
+				</section>
+
+				<section>
+
+					<section>
+
+						<h2>Wieso Terminal?</h2>
+
+						<ul>
+							<li>GUI auf Servern nicht verfügbar</li>
+							<li>Schneller</li>
+							<li>Ressourcensparender</li>
+							<li>Direkter</li>
+						</ul>
+
+					</section>
+
+					<section>
+
+						<h2>bash vs CMD</h2>
+
+						<p>Terminal: UNIX/bash-shell</p>
+
+						<ul>
+							<li>Linux (Ubuntu etc.)</li>
+							<li>Mac OSX</li>
+							<li>Android, iOS (bei Root)</li>
+						</ul>
+
+						<p>Windows benötigt dedizierte Software: cygwin</p>
+
+						<p>Windows 10: Ubuntu Layer</p>
+
+					</section>
+
+					<section>
+
+						<h2>AMOR</h2>
+
+						<p>CMS stellt Linux-Server für HU-Mitglieder bereit</p>
+
+						<pre><code>http://amor.cms.hu-berlin.de/~[HUACCOUNT]</code>[HUACCOUNT] durch eigenes HU-Benutzerkürzel austauschen</pre>
+
+						<pre><code>http://amor.cms.hu-berlin.de/~pololive</code></pre>
+
+					</section>
+
+					<section>
+
+						<h2>AMOR Login</h2>
+
+						<h3>Login mit Linux/Mac</h3>
+
+						<pre><code>ssh [HUACCOUNT]@amor.cms.hu-berlin.de</code>[HUACCOUNT] durch eigens HU-Benutzerkürzel austauschen</pre>
+
+						<h3>Login mit Windows</h3>
+
+						<p>SSH via <a href="http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html">Putty</a></p>
+
+					</section>
+
+					<section>
+
+						<h2>AMOR Dateitransfer</h2>
+
+						<h3><a href="https://filezilla-project.org/">FileZilla</a></h3>
+
+						<p>Dateitransfer via Drag and Drop</p>
+
+
+						<h3>AMOR Dateizugriff </h3>
+						<ul>
+							<li>Öffentliche Dateien im: <code>public_html</code> Ordner</li>
+							<li>Folien liegen auf AMOR: <a href="http://amor.cms.hu-berlin.de/~pololive/EWP-SoSe2016/"><code>http://amor.cms.hu-berlin.de/~pololive/EWP-SoSe2016/</code></a></li>
+							<li>Im Dateisystem:
+								<pre><code>~/public_html/EWP-SoSe2016</code></pre></li>
+						</ul>
+
+					</section>
+
+				</section>
+
+				<section>
+
+					<section>
+						<h1>Terminalbefehle</h1>
+					</section>
+
+					<section>
+
+						<h2>ls - Verzeichnisinhalt anzeigen</h2>
+
+						<pre><code>$ ls</code>Zeigt aktuellen Verzeichnisinhalt an</pre>
+
+						<pre><code>$ ls
+Bilder
+Dokumente
+Downloads
+Musik
+Projekte
+Schreibtisch
+Videos</code></pre>
+
+						<pre><code>$ ls Bilder
+Urlaub
+Katzen.png
+Hund.jpg
+						</code>Zeigt Verzeichnisinhalt im Bilder-Verzeichnis an</pre>
+
+					</section>
+
+					<section>
+
+						<h2>cd - Verzeichnis wechseln</h2>
+
+						<h3>Change Directory</h3>
+
+						<pre><code>$ cd Bilder</code>Ins Bilder-Verzeichnis wechseln</pre>
+
+						<pre><code>$ cd ..</code>Ins übergeordnete Verzeichnis zurückwechseln</pre>
+
+						<pre><code>$ cd ~</code>Ins Home-Verzeichnis zurückwechseln</pre>
+
+
+					</section>
+
+					<section>
+
+						<h2>pwd - Aktuelles Verzeichnis anzeigen</h2>
+
+						<h3>Print Working Directory</h3>
+
+						<pre><code>$ pwd
+/home/oli</code>Zeigt aktuelles Verzeichnis an</pre>
+
+						<pre><code>$ cd Bilder
+$ pwd
+/home/oli/Bilder</code></pre>
+
+					</section>
+
+					<section>
+
+						<h2>cp - Kopieren</h2>
+
+						<h3>Copy</h3>
+
+						<pre><code>$ ls
+Urlaub
+Katzen.png
+Hund.jpg
+						</code>Zeigt Verzeichnisinhalt im Bilder-Verzeichnis an</pre>
+
+						<pre><code>$ cp Hund.jpg WauWau.jpg</code>Kopiert Hund.jpg und benennt die Kopie WauWau.jpg</pre>
+
+						<pre><code>$ cp Hund.jpg ../</code>Kopiert Hund.jpg ins übergeordnete Verzeichnis (ohne Umbennenung)</pre>
+
+					</section>
+
+					<section>
+
+						<h2>mv - Verschieben und Umbenennen</h2>
+
+						<h3>Move</h3>
+
+						<pre><code>$ mv Hund.jpg Urlaub/</code>Verschiebt Hund.jpg ins Urlaub-Verzeichnis</pre>
+
+						<pre><code>$ mv Katzen.png Miau.png</code>Benennt Katzen.png in Miau.png um</pre>
+
+						<pre><code>$ mv * Urlaub</code>Verschiebt alle Dateien ins Urlaub-Verzeichnis</pre>
+
+						<pre><code>$ mv *.png ../</code>Verschiebt alle PNG-Dateien ins übergeordnete Verzeichnis</pre>
+
+
+					</section>
+
+					<section>
+
+						<h2>mkdir - Verzeichnis erstellen</h2>
+
+						<h3>Make Directory</h3>
+
+						<pre><code>$ ls
+Urlaub
+Katzen.png
+Hund.jpg</code>Zeigt Verzeichnisinhalt im Bilder-Verzeichnis an</pre>
+
+						<pre><code>$ mkdir Tiere</code>Erstellt Tiere-Verzeichnis</pre>
+
+						<pre><code>$ ls
+Tiere
+Urlaub
+Katzen.png
+Hund.jpg</code></pre>
+
+						<pre><code>$ mv Hund.jpg Katzen.jpg Tiere/</code>Verschiebt die Bilder ins Tiere-Verzeichnis</pre>
+
+					</section>
+
+					<section>
+
+						<h2>rm - Löschen</h2>
+
+						<h3>Remove</h3>
+
+						<pre><code>$ rm Katzen.png</code>Löscht Katzen.png</pre>
+
+						<pre><code>$ rm -r Tiere</code>Löscht das Tierverzeichnis rekursiv</pre>
+
+					</section>
+
+					<section>
+
+						<h2>less - Textdateien ansehen</h2>
+
+						<pre><code>$ less index.html</code>Zeigt Inhalt von index.html an</pre>
+
+					</section>
+
+					<section>
+
+						<h2>cat - Inhalt ausgeben</h2>
+
+						<pre><code>$ cat index.html</code>Gibt Inhalt von index.html ins Terminal aus</pre>
+
+					</section>
+
+					<section>
+
+						<h2>Sonderzeichen</h2>
+
+						<table>
+							<thead>
+								<tr>
+									<th>Zeichen</th>
+									<th>Bedeutung</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>.</td>
+									<td>aktuelles Verzeichnis</td>
+								</tr>
+								<tr>
+									<td>..</td>
+									<td>Oververzeichnis</td>
+								</tr>
+								<tr>
+									<td>*</td>
+									<td>Alle Dateien und Ordner in .</td>
+								</tr>
+								<tr>
+									<td>~</td>
+									<td>Homeverzeichnis</td>
+								</tr>
+								<tr>
+									<td>&gt;</td>
+									<td>Terminaloutput in Datei schreiben</td>
+								</tr>
+							</tbody>
+						</table>
+
+					</section>
+
+					<section>
+
+						<h2>&gt; - Output schreiben</h2>
+
+						<pre><code>$ uname -a
+Linux oli 4.4.0-21-generic #37-Ubuntu SMP Mon Apr 18 18:33:37 UTC 2016 x86_64 x86_64 x86_64 GNU/Linux</code>Linuxversion anzeigen</pre>
+
+						<pre><code>$ uname -a > linux-version.txt</code>Schreibt Output von uname -a in linux-version.txt</pre>
+
+						<pre><code>$ cat linux-version.txt
+Linux oli 4.4.0-21-generic #37-Ubuntu SMP Mon Apr 18 18:33:37 UTC 2016 x86_64 x86_64 x86_64 GNU/Linux</code>Linuxversion anzeigen</pre>
+
+					</section>
+
+					<section>
+
+						<h2>Terminaleditoren</h2>
+
+						<ul>
+							<li>vim</li>
+							<li>nano</li>
+							<li>emacs</li>
+						</ul>
+
+						<p>Diese Woche noch nicht nötig!</p>
+
+
+					</section>
+
+					<section>
+
+						<h1>KAHOOT</h1>
+						<h3><a href="http://www.kahoot.it">www.kahoot.it</a></h3>
+
+					</section>
+
+					<section>
+
+						<h2>Auswertung: Terminalbefehle</h2>
+
+					</section>
+
+				</section>
+
+				<section>
+
+					<section>
+
+						<h1>Mehr HTML</h1>
+
+					</section>
+
+					<section>
+
+						<h2>Meta-Tags</h2>
+
+						<ul>
+							<li>Im Head</li>
+							<li>Enthalten Zusantzinformatoinen</li>
+							<li>Kein schließendes Tag nötig</li>
+						</ul>
+
+						<pre><code>&lt;meta attribut="wert"&gt;</code></pre>
+
+					</section>
+
+					<section>
+
+						<h2>Unicode im Metatag</h2>
+
+						<pre><code data-trim data-noescape>
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;utf-8&gt;
+
+...
+
+&lt;span&gt;äüö仕方がない&lt;/span&gt;
+						</code></pre>
+
+						<table>
+							<thead>
+							<tr>
+								<th>Mit UTF-8</th>
+								<th>Ohne UTF-8</th>
+							</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>äüö仕方がない</td>
+									<td>? oder andere merkwürdige Zeichen</td>
+								</tr>
+							</tbody>
+						</table>
+
+					</section>
+
+					<section>
+
+						<h2>DOCTYPE</h2>
+
+						<p>Mehrere HTML-Versionen</p>
+
+						<ul>
+							<li>HTML 4</li>
+							<li>XHTML</li>
+							<li>HTML 5</li>
+						</ul>
+
+						<p>In diesem Kurs: HTML5 (aktueller und mehr Möglichkeiten)</p>
+
+						<hr>
+
+						<h3>DOCTYPE Deklaration</h3>
+
+						<pre><code>&lt;html&gt;</code></pre>
+
+					</section>
+
+					<section>
+
+						<h1>KAHOOT</h1>
+						<h3><a href="http://www.kahoot.it">www.kahoot.it</a></h3>
+
+					</section>
+
+				</section>
+
+
+			</div>
+
+			<div class="footer">
+				<a href="https://creativecommons.org/licenses/by/4.0/">
+					<img src="img/cc-by.png" alt="CC-BY" id="cc-logo">
+				</a>
+				Oliver Pohl, Einführung in die Webprogrammierung (SoSe 2016), Sitzung 02: Terminal. -- <a href="http://telotadev.bbaw.de/ewp-helper/questions">Anonyme Fragen: http://goo.gl/dDkMeL</a>
+			</div>
+
+		</div>
+
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/chart/Chart.min.js'}
+				],
+
+				chart: {
+					defaults: {
+						global: {
+							title: { fontColor: "#000" },
+						},
+						legend: {
+							labels: { fontColor: "#000" },
+						},
+						scale: {
+							scaleLabel: { fontColor: "#000" },
+							gridLines: { color: "#000", zeroLineColor: "#000" },
+							ticks: { fontColor: "#000" },
+						}
+					},
+					line: { borderColor: [ "rgba(20,220,220,.8)" , "rgba(220,120,120,.8)", "rgba(20,120,220,.8)" ], "borderDash": [ [5,10], [0,0] ]},
+					bar: { backgroundColor: [ "rgba(20,220,220,.8)" , "rgba(220,120,120,.8)", "rgba(20,120,220,.8)" ]},
+					pie: { backgroundColor: [ ["rgba(0,0,0,.8)" , "rgba(220,20,20,.8)", "rgba(20,220,20,.8)", "rgba(220,220,20,.8)", "rgba(20,20,220,.8)"] ]},
+					radar: { borderColor: [ "rgba(20,220,220,.8)" , "rgba(220,120,120,.8)", "rgba(20,120,220,.8)" ]},
+				},
+
+
+			});
+
+		</script>
+
+
+	</body>
+</html>
