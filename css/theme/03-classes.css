@@ -1,0 +1,15 @@
+.btn {
+    min-width: 30px;
+    margin-bottom: 5px;
+    border: 1px solid black;
+}
+
+.btn-success {
+    background-color: green;
+    color: white;
+}
+
+.btn-error {
+    background-color: red;
+    color: white;
+}

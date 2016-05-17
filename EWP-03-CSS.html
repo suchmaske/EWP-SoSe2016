@@ -1,0 +1,1056 @@
+<!doctype html>
+<html lang="de">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>EWP: CSS</title>
+
+		<meta name="description" content="Einführung in die Webprogrammierung SoSe 2016. Sitzung 3: CSS">
+		<meta name="author" content="Oliver Pohl">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/ibi.css" id="theme">
+		<link rel="stylesheet" href="css/theme/03-classes.css">
+		<link rel="stylesheet" href="css/theme/03-id.css">
+		<link rel="stylesheet" href="css/theme/03-margin.css">
+		<link rel="stylesheet" href="css/theme/03-padding.css">
+		<link rel="stylesheet" href="plugin/font-awesome/css/font-awesome.min.css">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+
+		<script src="js/jquery-1.11.1.min.js"></script>
+		<script src="js/ibi.js"></script>
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+
+				<section>
+
+					<h2>Einführung in die Webprogrammierung</h2>
+					<h4>Sitzung 03: CSS </h4>
+					<h4>Oliver Pohl: <a href="mailto:opohl@bbaw.de">opohl@bbaw.de</a></h4>
+
+				</section>
+
+				<section>
+
+					<section>
+						<h2>Agenda: CSS</h2>
+
+						<ul>
+							<li>Wiederholung: Terminal</li>
+							<li>CSS-Syntax</li>
+							<li>Inline vs. Head vs. Extern</li>
+							<li>HTML: Klassen &amp; IDs</li>
+							<li>CSS-Befehle</li>
+						</ul>
+					</section>
+
+				</section>
+
+				<section>
+
+					<section>
+
+						<h2>Wiederholung: Terminal</h2>
+
+					</section>
+
+					<section>
+						<h2>Befehle</h2>
+
+						<ul>
+							<li>ls</li>
+							<li>cd</li>
+							<li>cp</li>
+							<li>mv</li>
+							<li>mkdir</li>
+							<li>rm</li>
+							<li>ssh</li>
+							<li>less</li>
+						</ul>
+
+						<p>...</p>
+					</section>
+
+					<section>
+
+						<h2>AMOR</h2>
+
+						<ul>
+							<li>Login</li>
+							<li>Dateitransfer</li>
+							<li>Anzeige von Projekten</li>
+						</ul>
+
+					</section>
+
+					<section>
+
+						<h1>KAHOOT</h1>
+						<h3><a href="http://www.kahoot.it">www.kahoot.it</a></h3>
+
+					</section>
+
+				</section>
+
+				<section>
+
+					<h2>Warmup</h2>
+
+					<p>Gestaltungsregeln analyiseren.</p>
+
+					<ul>
+						<li>Schrift</li>
+						<li>Farbe</li>
+						<li>Abstände</li>
+						<li>Position</li>
+						<li>...</li>
+					</ul>
+
+				</section>
+
+				<section>
+
+					<section>
+
+						<h2>CSS</h2>
+
+						<p>Cascading Stylesheets</p>
+
+					</section>
+
+					<section>
+
+						<h2>Ziel</h2>
+
+						<p>HTML-Code Gestaltungsinformation verleihen</p>
+
+					</section>
+
+					<section>
+
+						<h2>CSS-Syntax</h2>
+
+						<pre><code>selektor { gestaltungsattribut: wert; }</code>Grundlegende CSS Syntax</pre>
+
+
+						<h3>Beispiel</h3>
+
+						<pre><code data-trim data-noescape>
+div {
+  background-color: red;
+  color: white;
+  margin: 10px;
+}
+						</code>Die Hintergrundfarbe für alle div-Elemente ist rot.
+Texte in divs haben eine weiße Schrift.
+Divs haben einen äußeren Abstand von 10 Pixeln zu allen Seiten.</pre>
+
+					</section>
+
+					<section>
+
+						<h2>CSS-Syntax Aufschlüsselung</h2>
+
+						<table>
+							<thead>
+							<tr>
+								<th>Baustein</th>
+								<th>Bedeutung</th>
+							</tr>
+							</thead>
+							<tbody>
+							<tr>
+								<td>selektor</td>
+								<td>Ausgewählte Elemente</td>
+							</tr>
+							<tr>
+								<td>{ }</td>
+								<td>Container für CSS-Befehle</td>
+							</tr>
+							<tr>
+								<td>gestaltungsattribut</td>
+								<td>Auszugestaltendens Merkmal</td>
+							</tr>
+							<tr>
+								<td>:</td>
+								<td>Trennzeichen zwischen dem Gestaltungsattribut und seinem zugewisenen Wert</td>
+							</tr>
+							<tr>
+								<td>wert</td>
+								<td>Wert für das Gestaltungsattribut</td>
+							</tr>
+							<tr>
+								<td>;</td>
+								<td>Trennzeichen zwischen CSS-Befehlen</td>
+							</tr>
+							</tbody>
+						</table>
+
+					</section>
+
+				</section>
+
+				<section>
+
+					<section>
+
+						<h2>Anwendungsmöglichkeiten</h2>
+
+						<ul>
+							<li>Inline</li>
+							<li>im Head</li>
+							<li>Ausgelagert</li>
+						</ul>
+
+					</section>
+
+					<section>
+
+						<h2>Inline-CSS</h2>
+
+						<p>CSS-Befehle direkt im Element</p>
+
+						<div class="Code-Example Code-Example--html">
+
+							<div class="Code-Example__Code">
+									<pre><code class="Code--html" data-trim data-noescape>
+<div style="color: white; background-color: red;">A</div>
+<div>B</div>
+<div style="color: white; background-color: red;">C</div>
+									</code></pre>
+							</div>
+
+							<div class="Code-Example__Result">
+
+								<div style="color: white; background-color: red;">A</div>
+								<div>B</div>
+								<div style="color: white; background-color: red;">C</div>
+
+							</div>
+
+						</div>
+
+						<br>
+						<ul>
+							<li>Code wird unleserlich</li>
+							<li>Merkmale müssen wiederholt werden</li>
+							<li>Fehleranfällig</li>
+							<li>Nur gut zum Testen</li>
+						</ul>
+
+
+					</section>
+
+					<section>
+
+						<h2>CSS im Head</h2>
+
+						<p>Im Style-Element im Head</p>
+
+						<div class="Code-Example Code-Example--html">
+						<div class="Code-Example__Code">
+									<pre>
+<code>&lt;html&gt;
+  &lt;head&gt;
+   &lt;style&gt;
+     div {
+       color: red;
+       background-color: white;
+     }
+   &lt;/style&gt;
+   &lt;/head&gt;
+   &lt;body&gt;
+	&lt;div&gt;A&lt;/div&gt;
+	&lt;div&gt;B&lt;/div&gt;
+	&lt;div&gt;C&lt;/div&gt;
+   &lt;/body&gt;
+&lt;/html&gt;
+</code>CSS im Head</pre>
+							</div>
+
+							<div class="Code-Example__Result">
+
+								<div style="color: white; background-color: red;">A</div>
+								<div style="color: white; background-color: red;">B</div>
+								<div style="color: white; background-color: red;">C</div>
+
+							</div>
+
+						</div>
+
+						<ul>
+							<li>Ans HTML-Dokument gebunden</li>
+							<li>Fehleranfällig bei Änderungen</li>
+							<li>Besser leserlich als Inline-CSS</li>
+						</ul>
+
+					</section>
+
+					<section>
+
+						<h2>CSS in Datei</h2>
+
+						<p>Ausgelagert in externe Datei und ins HTML-Dokument einbinden</p>
+
+						<pre><code data-trim>
+div {
+  color: white;
+  background-color: red;
+}
+						</code>Ausgelagerte CSS-Datei: styles.css</pre>
+
+						<div class="Code-Example Code-Example--html">
+							<div class="Code-Example__Code">
+									<pre>
+<code>&lt;html&gt;
+  &lt;head&gt;
+    &lt;link rel="stylesheet" href="styles.css"&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div&gt;A&lt;/div&gt;
+    &lt;div&gt;B&lt;/div&gt;
+    &lt;div&gt;C&lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code>CSS im Head</pre>
+							</div>
+
+							<div class="Code-Example__Result">
+
+								<div style="color: white; background-color: red;">A</div>
+								<div style="color: white; background-color: red;">B</div>
+								<div style="color: white; background-color: red;">C</div>
+
+							</div>
+
+							</div>
+
+					</section>
+
+					<section>
+
+						<h2>Methodenvergleich</h2>
+
+						<table>
+							<thead>
+							<tr>
+								<th></th>
+								<th>Inline</th>
+								<th>Head</th>
+								<th>Extern</th>
+							</tr>
+							</thead>
+							<tbody>
+							<tr>
+								<td>Trennung zu HTML</td>
+								<td><i class="fa fa-frown-o"></i></td>
+								<td><i class="fa fa-meh-o"></i></td>
+								<td><i class="fa fa-smile-o"></i></td>
+							</tr>
+							<tr>
+								<td>Lesbarkeit</td>
+								<td><i class="fa fa-frown-o"></i></td>
+								<td><i class="fa fa-smile-o"></i></td>
+								<td><i class="fa fa-smile-o"></i></td>
+							</tr>
+							<tr>
+								<td>Nutzbarkeit in Projekten</td>
+								<td><i class="fa fa-frown-o"></i></td>
+								<td><i class="fa fa-frown-o"></i></td>
+								<td><i class="fa fa-smile-o"></i></td>
+							</tr>
+							<tr>
+								<td>Fazit</td>
+								<td><i class="fa fa-frown-o"></i></td>
+								<td><i class="fa fa-meh-o"></i></td>
+								<td><i class="fa fa-smile-o"></i></td>
+							</tr>
+							</tbody>
+						</table>
+
+					</section>
+
+				</section>
+
+				<section>
+
+
+					<section>
+						<h2>Klassen &amp; IDs</h2>
+					</section>
+
+					<section>
+
+						<h2>Klassen</h2>
+
+						<p>Gleiche Eigenschaften für mehrere, bestimmte Elemente</p>
+
+						<hr>
+
+						<h3>Beispielklasse: Schwarzes Auto</h3>
+
+						<p>Schwarzer BMW vs. Schwarzer Audi</p>
+
+						<ul>
+							<li>Lack: Schwarz</li>
+							<li>Reifen: 4</li>
+							<li>Türen: 4</li>
+							<li>Getriebe: Manuell</li>
+						</ul>
+
+					</section>
+
+					<section>
+
+						<h2>Beispiel in HTML: Buttons</h2>
+
+						<pre><code data-code="./css/theme/03-classes.css">
+
+						</code></pre>
+
+						<div class="Code-Example Code-Example--html">
+							<div class="Code-Example__Code">
+									<pre>
+<code><button class="btn">Normaler Button</button>
+<button class="btn btn-success">Erfolg</button>
+<button class="btn btn-error">Fehler</button></code></pre>
+							</div>
+
+							<div class="Code-Example__Result">
+								<button class="btn">Normaler Button</button>
+								<button class="btn btn-success">Erfolg</button>
+								<button class="btn btn-error">Fehler</button>
+							</div>
+
+						</div>
+
+					</section>
+
+					<section>
+
+						<h2>Verwendung von Klassen</h2>
+
+						<ul>
+							<li>class-Attribut im Element</li>
+							<li>Mehrere Klassen im selben Attribut durch Leerstelle getrennt</li>
+						</ul>
+
+						<pre><code><button class="btn btn-success">Erfolg</button></code>Das Button-Element hat die Klassen btn und btn-success.</pre>
+
+						<hr>
+
+						<ul>
+							<li>Selektion über: Punkt + Klassenname: .classname</li>
+						</ul>
+
+						<pre><code>.btn-success {
+  background-color: green;
+  color: white;
+}</code>CSS für HTML-Elemente mit der Klasse: btn-success</pre>
+
+					</section>
+
+					<section>
+
+						<h2>IDs</h2>
+
+						<p>Merkmale für besondere, einzelne Elemente</p>
+						<p>Eine ID sollte nur 1 Mal vorkommen!</p>
+
+						<hr>
+
+						<h3>Beispiel: Roter BMW Sportwagen</h3>
+
+						<p>Fügt weitere Attribute zur "Schwarzes Auto" Klasse hinzu oder ändert sie</p>
+
+						<ul>
+							<li>Türen: 2 <strike>vier</strike></li>
+							<li>Farbe: rot <strike>schwarz</strike></li>
+							<li>Reifen: 4</li>
+							<li>Getriebe: manuell</li>
+						</ul>
+
+					</section>
+
+					<section>
+
+						<h2>Beispiel in HTML: Buttons</h2>
+
+						<pre><code data-code="./css/theme/03-id.css">
+
+						</code></pre>
+
+						<div class="Code-Example Code-Example--html">
+							<div class="Code-Example__Code">
+									<pre>
+<code><button class="btn">Normaler Button</button>
+<button class="btn btn-error">Fehler</button>
+<button class="btn btn-error" id="self-destruct">Explosion</button></code></pre>
+							</div>
+
+							<div class="Code-Example__Result">
+								<button class="btn">Normaler Button</button>
+								<button class="btn btn-error">Fehler</button>
+								<button class="btn btn-error" id="self-destruct">Explosion</button></code></pre>
+							</div>
+
+						</div>
+
+					</section>
+
+					<section>
+
+						<h2>Verwendung von IDs</h2>
+
+						<ul>
+							<li>id-Attribut im Element</li>
+							<li>Nur eine ID pro Element</li>
+							<li>ID sollte im Code nicht zwei Mal vorkommen!</li>
+						</ul>
+
+						<pre><code><button id="self-destruct">Explosion</button></code>Das Button-Element hat die ID self-destruct.</pre>
+
+						<hr>
+
+						<ul>
+							<li>Selektion über: Raute + Klassenname: #idname</li>
+						</ul>
+
+						<pre><code>#self-destruct {
+  background: black;
+  font-size: 30px;
+}</code>CSS für das HTML-Elemente mit der ID: self-destruct</pre>
+
+					</section>
+
+					<section>
+
+						<h2>Vergleich: Klassen &amp; IDs</h2>
+
+						<table>
+							<thead>
+							<tr>
+								<th></th>
+								<th>Klassen</th>
+								<th>ID</th>
+							</tr>
+							</thead>
+							<tbody>
+							<tr>
+								<td>Attribut in HTML</td>
+								<td>class</td>
+								<td>id</td>
+							</tr>
+							<tr>
+								<td>Selektorzeichen in CSS</td>
+								<td>.</td>
+								<td>#</td>
+							</tr>
+							<tr>
+								<td>Verwendungshäufigkeit</td>
+								<td>Beliebig oft</td>
+								<td>1 Mal pro Seite</td>
+							</tr>
+							</tbody>
+						</table>
+
+					</section>
+
+					<section>
+
+						<h1>KAHOOT</h1>
+						<h3><a href="http://www.kahoot.it">www.kahoot.it</a></h3>
+
+					</section>
+
+				</section>
+
+				<section>
+
+					<section>
+						<h2>CSS-Befehle</h2>
+					</section>
+
+					<section>
+
+						<h2>Schriftgröße: font-size</h2>
+
+						<pre><code>div { font-size: 15px; }</code>Schrift in Div-Elementen ist 10px groß.</pre>
+
+						<pre><code>span { font-size: 2em; }</code>Schrift in span-Elementen ist doppelt so groß
+wie die Schrift im Eltern-Element.</pre>
+
+						<div class="Code-Example Code-Example--html">
+							<div class="Code-Example__Code">
+									<pre>
+<code><div>
+  Das letzt Wort ist <span>groß</span>.
+</div></code></pre>
+							</div>
+
+							<div class="Code-Example__Result">
+								<div style="font-size: 15px;">
+									Das letzt Wort ist <span style="font-size: 2em;">groß</span>.
+								</div></code></pre>
+							</div>
+
+						</div>
+
+					</section>
+
+					<section>
+
+						<h2>Höhe und Breite: width &amp; height</h2>
+
+						<pre><code>button {
+  width: 100px;
+  height: 25px;
+}</code>Buttons sind 100px breit und 25px hoch</pre>
+
+						<div class="Code-Example Code-Example--html">
+							<div class="Code-Example__Code">
+									<pre>
+<code><button class="btn btn-success">Erfolg</button>
+<button class="btn btn-error">Fehler</button></code></pre>
+							</div>
+
+							<div class="Code-Example__Result">
+								<button class="btn btn-success" style="width: 100px; height: 25px;">Erfolg</button>
+								<button class="btn btn-error" style="width: 100px; height: 25px;">Fehler</button></code></pre>
+							</div>
+
+						</div>
+
+					</section>
+
+					<section>
+
+						<h2>Exkurs: Farben im Web</h2>
+
+						<p>Insgesamt: über 16 Mio. Farben möglich</p>
+
+						<p>3 Farbkanäle - Rot, Grün, Blau</p>
+
+						<table>
+							<thead>
+							<tr>
+								<th>Name</th>
+								<th>Hex-Code</th>
+								<th>Farbe</th>
+							</tr>
+							</thead>
+							<tbody>
+							<tr>
+								<td>Schwarz</td>
+								<td>#000000</td>
+								<td style="background-color: #000000"></td>
+							</tr>
+							<tr>
+								<td>Weiß</td>
+								<td>#FFFFFF</td>
+								<td style="background-color: #ffffff"></td>
+							</tr>
+							<tr>
+								<td>Rot</td>
+								<td>#FF0000</td>
+								<td style="background-color: #ff0000"></td>
+							</tr>
+							<tr>
+								<td>Grün</td>
+								<td>#00FF00</td>
+								<td style="background-color: #00ff00"></td>
+							</tr>
+							<tr>
+								<td>Blau</td>
+								<td>#0000FF</td>
+								<td style="background-color: #0000ff"></td>
+							</tr>
+							</tbody>
+						</table>
+
+					</section>
+
+					<section>
+
+						<h2>Weitere Farben</h2>
+
+						<table>
+							<thead>
+							<tr>
+								<th>Name</th>
+								<th>Hex-Code</th>
+								<th>Farbe</th>
+							</tr>
+							</thead>
+							<tbody>
+							<tr>
+								<td>Gelb</td>
+								<td>#FFFF00</td>
+								<td style="background-color: #ffff00"></td>
+							</tr>
+							<tr>
+								<td>Violett</td>
+								<td>#800080</td>
+								<td style="background-color: #800080"></td>
+							</tr>
+							<tr>
+								<td>Teal</td>
+								<td>#008080</td>
+								<td style="background-color: #008080"></td>
+							</tr>
+							<tr>
+								<td>Grau</td>
+								<td>#808080</td>
+								<td style="background-color: #808080"></td>
+							</tr>
+							<tr>
+								<td>Deeppink</td>
+								<td>#FF1493</td>
+								<td style="background-color: #FF1493"></td>
+							</tr>
+							</tbody>
+						</table>
+
+					</section>
+
+					<section>
+
+						<h2>Textfarbe: color</h2>
+
+						<pre><code>.btn {
+		  color: white;
+		}</code>Textfarbe ist weiß (mit Farblabel)</pre>
+						<pre><code>.btn {
+		  color: #000000;
+		}</code>Textfarbe ist weiß (mit Hex-Code)</pre>
+
+						<div class="Code-Example Code-Example--html">
+							<div class="Code-Example__Code">
+									<pre>
+<code><button class="btn btn-success">Erfolg</button>
+<button class="btn btn-error">Fehler</button></code></pre>
+							</div>
+
+							<div class="Code-Example__Result">
+								<button class="btn btn-success" style="width: 100px; height: 25px;">Erfolg</button>
+								<button class="btn btn-error" style="width: 100px; height: 25px;">Fehler</button></code></pre>
+							</div>
+
+						</div>
+
+
+					</section>
+
+					<section>
+
+						<h2>Hintergrundfarbe</h2>
+
+						<pre><code>.btn-success {
+  background-color: green;
+}
+
+.btn-error {
+  background-color: #ff0000;
+}</code>Bei .btn-success ist die Hintergrundfarbe grün (mit Label).
+Bei .btn-error ist sie rot (mit Hex-Code).</pre>
+
+						<div class="Code-Example Code-Example--html">
+							<div class="Code-Example__Code">
+									<pre>
+<code><button class="btn btn-success">Erfolg</button>
+<button class="btn btn-error">Fehler</button></code></pre>
+							</div>
+
+							<div class="Code-Example__Result">
+								<button class="btn btn-success" style="width: 100px; height: 25px;">Erfolg</button>
+								<button class="btn btn-error" style="width: 100px; height: 25px;">Fehler</button></code></pre>
+							</div>
+
+						</div>
+
+
+					</section>
+
+					<section>
+
+						<h2>Umrandung: border</h2>
+
+						<pre><code>.btn {
+  border: 1px solid black;
+}</code>Elemente mit der btn-Klasse haben eine 1px dicke,
+durchgezogene, schwarze Umrandung.</pre>
+
+
+						<div class="Code-Example Code-Example--html">
+							<div class="Code-Example__Code">
+									<pre>
+<code><button class="btn btn-success">Erfolg</button>
+<button class="btn btn-error">Fehler</button></code></pre>
+							</div>
+
+							<div class="Code-Example__Result">
+<button class="btn btn-success" style="width: 100px; height: 25px;">Erfolg</button>
+<button class="btn btn-error" style="width: 100px; height: 25px;">Fehler</button></code></pre>
+							</div>
+
+						</div>
+
+					</section>
+
+					<section>
+
+						<h2>Äußerer Rand: margin</h2>
+
+						<pre><code>.custom-block {
+	color: white;
+	background-color: red;
+
+	margin: 10px;
+	/*
+	Entspricht
+	margin-top: 10px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	margin-left: 10px;
+	*/
+}</code>Elemente mit der custom-block-Klasse haben einen 10px dicken Rand
+in alle vier Richtungen.</pre>
+
+						<div class="Code-Example Code-Example--html">
+
+							<div class="Code-Example__Code">
+									<pre><code class="Code--html" data-trim data-noescape>
+<div class="custom-block">A</div>
+<div class="custom-block">B</div>
+<div class="custom-block">C</div>
+									</code></pre>
+							</div>
+
+							<div class="Code-Example__Result">
+
+								<div class="custom-block">A</div>
+								<div class="custom-block">B</div>
+								<div class="custom-block">C</div>
+
+							</div>
+						</div>
+
+					</section>
+
+					<section>
+
+						<h2>Abstand zwischen Kern und Umrandung: padding</h2>
+
+						<pre><code>.custom-span {
+  color: white;
+  background-color: teal;
+  padding: 20px 50px;
+  /*
+  padding-top: 20px;
+  padding-right: 50px;
+  padding-bottom: 20px;
+  padding-left: 50px
+  */
+  margin:  30px;
+}</code>Elemente mit der custom-span-Klasse haben 20px Zusatzfüllung nach
+oben und unten, und 50px nach links und rechts (um den Kern herum).</pre>
+
+					<div class="Code-Example Code-Example--html">
+						<div class="Code-Example__Code">
+<pre><code class="Code--html" data-trim data-noescape>Das ist das
+<span class="custom-span">Haus</span>
+vom Nikolaus.</code></pre>
+						</div>
+
+						<div class="Code-Example__Result">
+
+							Das ist das <span class="custom-span">Haus</span> vom Nikolaus.
+
+						</div>
+			</div>
+
+					</section>
+
+					<section>
+
+						<h2>Border, Margin, Padding</h2>
+
+						<div>
+							<button>Knopf</button>
+						</div>
+
+
+					</section>
+
+					<section>
+
+						<h2>Position</h2>
+
+						<ul>
+							<li>absolute: Fester Punkt auf der "Webseiten-Leinwand"</li>
+							<li>relative: Position relativ zum Elternelement</li>
+							<li>fixed: Fixer Punkt auf dem Bildschirm</li>
+						</ul>
+
+					</section>
+
+					<section>
+
+						<h2>Orientierung: float</h2>
+
+							<div class="Code-Example__Code">
+<pre><code class="Code--html" data-trim data-noescape>Jelly-o tootsie roll topping danish jelly-o bonbon caramels. Carrot Cake
+<span class="custom-span" style="float: right">
+	ice cream cookie
+</span>
+halvah dessert cupcake tart.
+Jelly oat cake jujubes sesame snaps cookie fruitcake.
+</code></pre>
+							</div>
+
+							<div class="Code-Example__Result">
+								Jelly-o tootsie roll topping danish jelly-o bonbon caramels. Carrot Cake
+<span class="custom-span" style="float: right">
+	ice cream cookie
+</span>
+								halvah dessert cupcake tart.
+								Jelly oat cake jujubes sesame snaps cookie fruitcake.
+							</div>
+
+						<p>Aber sehr umständlich</p>
+
+
+					</section>
+
+					<section>
+
+						<h2>Flexbox</h2>
+
+						<p>Nächste Sitzung</p>
+
+					</section>
+
+					<section>
+
+						<h2>Übung</h2>
+
+						<a href="http://jsbin.com/jijobusivu/1/edit?html,css,output">http://goo.gl/QNti3Y</a>
+
+					</section>
+
+					<section>
+
+						<h1>KAHOOT</h1>
+						<h3><a href="http://www.kahoot.it">www.kahoot.it</a></h3>
+
+					</section>
+
+
+
+				</section>
+
+
+				<section>
+
+					The next time on <b>EWP</b>
+
+					<p>Flexboxes &amp; BEM</p>
+
+				</section>
+
+
+			</div>
+
+			<div class="footer">
+				<a href="https://creativecommons.org/licenses/by/4.0/">
+					<img src="img/cc-by.png" alt="CC-BY" id="cc-logo">
+				</a>
+				Oliver Pohl, Einführung in die Webprogrammierung (SoSe 2016), Sitzung 03: CSS. -- <a href="http://telotadev.bbaw.de/ewp-helper/questions">Anonyme Fragen: http://goo.gl/dDkMeL</a>
+			</div>
+
+		</div>
+
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/chart/Chart.min.js' },
+					{ src: 'plugin/chart/csv2chart.js' },
+					{ src: 'plugin/externalcode/externalcode.js'},
+				],
+
+				chart: {
+					defaults: {
+						global: {
+							title: { fontColor: "#000" },
+						},
+						legend: {
+							labels: { fontColor: "#000" },
+						},
+						scale: {
+							scaleLabel: { fontColor: "#000" },
+							gridLines: { color: "#000", zeroLineColor: "#000" },
+							ticks: { fontColor: "#000" },
+						}
+					},
+					line: { borderColor: [ "rgba(20,220,220,.8)" , "rgba(220,120,120,.8)", "rgba(20,120,220,.8)" ], "borderDash": [ [5,10], [0,0] ]},
+					bar: { backgroundColor: [ "rgba(20,220,220,.8)" , "rgba(220,120,120,.8)", "rgba(20,120,220,.8)" ]},
+					pie: { backgroundColor: [ ["rgba(0,0,0,.8)" , "rgba(220,20,20,.8)", "rgba(20,220,20,.8)", "rgba(220,220,20,.8)", "rgba(20,20,220,.8)", "rgba(252,158,206, 0.8)"] ]},
+					radar: { borderColor: [ "rgba(20,220,220,.8)" , "rgba(220,120,120,.8)", "rgba(20,120,220,.8)" ]},
+				},
+
+
+			});
+
+		</script>
+
+
+	</body>
+</html>

@@ -1,0 +1,8 @@
+#self-destruct {
+    background: black;
+    font-size: 30px;
+}
+
+#self-destruct:hover {
+    background: red;
+}
