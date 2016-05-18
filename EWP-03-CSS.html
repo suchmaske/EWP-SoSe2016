@@ -125,6 +125,8 @@
 
 					<p>Gestaltungsregeln analyiseren.</p>
 
+					<p>Google-Trefferseite</p>
+
 					<ul>
 						<li>Schrift</li>
 						<li>Farbe</li>
@@ -972,6 +974,155 @@ Jelly oat cake jujubes sesame snaps cookie fruitcake.
 
 					</section>
 
+
+
+				</section>
+
+				<section>
+
+
+					<section>
+
+					    <h2>Weitere Selektoren</h2>
+
+						<ul>
+							<li>Regeln auf verschiedene Selektoren anwenden</li>
+							<li>Selektoren mit mehreren Bedingungen</li>
+							<li>Child-Elements</li>
+						</ul>
+
+					</section>
+
+					<section>
+
+					    <h2>Verschiedene Selektoren: <code>,</code></h2>
+
+						<p>Selektoren durch Komma trennen</p>
+
+						<pre><code>.btn-success, .btn-error  {
+  opacity: 0.3;
+}</code>Elemente mit den Klassen .btn-success oder .btn-error sind stark durchsichtigt.</pre>
+
+						<div class="Code-Example Code-Example--html">
+						    <div class="Code-Example__Code">
+						        <pre><code class="Code--html" data-trim data-noescape>
+<button class="btn">Normaler Button</button>
+<button class="btn btn-success">Erfolg</button>
+<button class="btn btn-error">Fehler</button>
+								</code></pre>
+						    </div>
+
+						    <div class="Code-Example__Result">
+								<button class="btn">Normaler Button</button>
+								<button class="btn btn-success" style="opacity: 0.3;">Erfolg</button>
+								<button class="btn btn-error" style="opacity: 0.3;">Fehler</button>
+						    </div>
+						</div>
+
+
+					</section>
+
+					<section>
+
+					    <h2>Mehrere Bedingungen</h2>
+
+						<p>Selektor soll mehrere Klassen oder IDs haben.</p>
+
+						<p>Selektoren ohne Leerzeichen hintereinanderweg schreiben</p>
+
+						<pre><code>.btn.btn-success {
+  font-size: 50px;
+}</code>Nur Elemente mit sowohl der Klasse .btn als auch der Klasse .btn-success
+haben eine Schriftgröße von 50px.</pre>
+
+						<div class="Code-Example Code-Example--html">
+						    <div class="Code-Example__Code">
+						        <pre><code class="Code--html" data-trim data-noescape>
+<button class="btn">Normaler Button</button>
+<button class="btn btn-success">Erfolg</button>
+<button class="btn btn-error">Fehler</button>
+						        </code></pre>
+						    </div>
+
+						    <div class="Code-Example__Result">
+								<button class="btn">Normaler Button</button>
+								<button class="btn btn-success" style="font-size: 50px;">Erfolg</button>
+								<button class="btn btn-error">Fehler</button>
+						    </div>
+						</div>
+
+					</section>
+
+
+					<section>
+
+					    <h2>Direct Children: <code>&gt;</code></h2>
+
+						<pre><code> a > .highlight {
+  background-color: yellow;
+}</code>Nur Elemente mit der Klasse .highlight direkt in einem a-Element
+haben einen gelben Hintergrund.</pre>
+
+						<div class="Code-Example Code-Example--html">
+						    <div class="Code-Example__Code">
+						        <pre><code class="Code--html" data-trim data-noescape>
+<ul>
+  <li class="highlight">Chupa chups chocolate
+	  cake pudding</li>
+
+  <li>Sugar <a href="#">plum
+	  <span class="highlight">cake</span>
+  </a> cheesecake.</li>
+</ul>
+						        </code></pre>
+						    </div>
+
+						    <div class="Code-Example__Result">
+								<li class="highlight">Chupa chups chocolate cake pudding</li>
+								<li>Sugar <a href="#">plum <span class="highlight" style="background-color: yellow">cake</span></a> cheesecake.</li>
+						    </div>
+						</div>
+
+					</section>
+
+					<section>
+
+						<h2>Some Children</h2>
+
+						<pre><code> li .highlight {
+  background-color: yellow;
+}</code>Alle Elemente mit der Klasse .highlight in einem li-Element
+erhalten einen gelben Hintergrund.</pre>
+
+						<div class="Code-Example Code-Example--html">
+							<div class="Code-Example__Code">
+						        <pre><code class="Code--html" data-trim data-noescape>
+<ul>
+	<li class="highlight">Chupa chups chocolate
+		cake pudding</li>
+
+	<li><span class="highlight">Sugar </span>
+		<a href="#">plum
+		<span class="highlight">cake</span>
+	</a> cheesecake.</li>
+</ul>
+								</code></pre>
+							</div>
+
+							<div class="Code-Example__Result">
+								<ul>
+									<li class="highlight">Chupa chups chocolate
+										cake pudding</li>
+
+									<li><span class="highlight" style="background-color: yellow">Sugar </span>
+										<a href="#">plum
+											<span class="highlight" style="background-color: yellow">cake</span>
+										</a> cheesecake.</li>
+								</ul>
+							</div>
+						</div>
+
+					</section>
 
 
 				</section>
