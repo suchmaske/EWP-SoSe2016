@@ -1,0 +1,26 @@
+.Suchtreffer {
+    max-height: 250px;
+}
+
+.Suchtreffer__Title {
+    font-size: 1.5em;
+    color: blue;
+}
+
+.Suchtreffer--Visited .Suchtreffer__Title {
+    color: purple;
+}
+
+.Suchtreffer__Link {
+    font-size: 0.7em;
+    color: green;
+}
+
+.Suchtreffer__Snippet {
+    color: black;
+}
+
+.Suchtreffer__Visited_at {
+    font-size: 0.7em;
+    color: grey;
+}

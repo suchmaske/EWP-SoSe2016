@@ -1,0 +1,462 @@
+<!doctype html>
+<html lang="de">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>EWP: BEM &amp; Flexboxes</title>
+
+		<meta name="description" content="Einführung in die Webprogrammierung SoSe 2016. Sitzung 4: BEM & Flexboxes">
+		<meta name="author" content="Oliver Pohl">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/ibi.css" id="theme">
+		<link rel="stylesheet" href="css/theme/03-classes.css">
+		<link rel="stylesheet" href="css/theme/03-id.css">
+		<link rel="stylesheet" href="css/theme/03-margin.css">
+		<link rel="stylesheet" href="css/theme/03-padding.css">
+		<link rel="stylesheet" href="plugin/font-awesome/css/font-awesome.min.css">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+
+		<script src="js/jquery-1.11.1.min.js"></script>
+		<script src="js/ibi.js"></script>
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+
+				<section>
+
+					<h2>Einführung in die Webprogrammierung</h2>
+					<h4>Sitzung 04: BEM &amp; Flexboxes</h4>
+					<h4>Oliver Pohl: <a href="mailto:opohl@bbaw.de">opohl@bbaw.de</a></h4>
+
+				</section>
+
+				<section>
+
+					<section>
+						<h2>Agenda: BEM &amp; Flexboxes</h2>
+
+						<ul>
+							<li>Wiederholung: CSS</li>
+							<li>Block Entity Model (BEM)</li>
+							<li>Floats</li>
+							<li>Flexboxes</li>
+						</ul>
+					</section>
+
+					<section>
+
+						<h2>Wiederholung: CSS</h2>
+
+					</section>
+
+					<section>
+
+						<h2>CSS-Syntax</h2>
+
+						<pre><code>selektor { gestaltungsattribut: wert; }</code>Grundlegende CSS Syntax</pre>
+
+
+						<h3>Beispiel</h3>
+
+						<pre><code data-trim data-noescape>
+div {
+  background-color: red;
+  color: white;
+  margin: 10px;
+}
+						</code>Die Hintergrundfarbe für alle div-Elemente ist rot.
+Texte in divs haben eine weiße Schrift.
+Divs haben einen äußeren Abstand von 10 Pixeln zu allen Seiten.</pre>
+
+					</section>
+
+					<section>
+
+						<h2>Methodenvergleich</h2>
+
+						<table>
+							<thead>
+							<tr>
+								<th></th>
+								<th>Inline</th>
+								<th>Head</th>
+								<th>Extern</th>
+							</tr>
+							</thead>
+							<tbody>
+							<tr>
+								<td>Trennung zu HTML</td>
+								<td><i class="fa fa-frown-o"></i></td>
+								<td><i class="fa fa-meh-o"></i></td>
+								<td><i class="fa fa-smile-o"></i></td>
+							</tr>
+							<tr>
+								<td>Lesbarkeit</td>
+								<td><i class="fa fa-frown-o"></i></td>
+								<td><i class="fa fa-smile-o"></i></td>
+								<td><i class="fa fa-smile-o"></i></td>
+							</tr>
+							<tr>
+								<td>Nutzbarkeit in Projekten</td>
+								<td><i class="fa fa-frown-o"></i></td>
+								<td><i class="fa fa-frown-o"></i></td>
+								<td><i class="fa fa-smile-o"></i></td>
+							</tr>
+							<tr>
+								<td>Fazit</td>
+								<td><i class="fa fa-frown-o"></i></td>
+								<td><i class="fa fa-meh-o"></i></td>
+								<td><i class="fa fa-smile-o"></i></td>
+							</tr>
+							</tbody>
+						</table>
+
+					</section>
+
+					<section>
+
+						<h2>Farben im Web</h2>
+
+						<p>Insgesamt: über 16 Mio. Farben möglich</p>
+
+						<p>3 Farbkanäle - Rot, Grün, Blau</p>
+
+						<table>
+							<thead>
+							<tr>
+								<th>Name</th>
+								<th>Hex-Code</th>
+								<th>Farbe</th>
+							</tr>
+							</thead>
+							<tbody>
+							<tr>
+								<td>Schwarz</td>
+								<td>#000000</td>
+								<td style="background-color: #000000"></td>
+							</tr>
+							<tr>
+								<td>Weiß</td>
+								<td>#FFFFFF</td>
+								<td style="background-color: #ffffff"></td>
+							</tr>
+							<tr>
+								<td>Rot</td>
+								<td>#FF0000</td>
+								<td style="background-color: #ff0000"></td>
+							</tr>
+							<tr>
+								<td>Grün</td>
+								<td>#00FF00</td>
+								<td style="background-color: #00ff00"></td>
+							</tr>
+							<tr>
+								<td>Blau</td>
+								<td>#0000FF</td>
+								<td style="background-color: #0000ff"></td>
+							</tr>
+							</tbody>
+						</table>
+
+					</section>
+
+					<section>
+
+						<h2>CSS-Befehle</h2>
+
+						<ul>
+							<li>font-size</li>
+							<li>width, height</li>
+							<li>color</li>
+							<li>background-color</li>
+							<li>padding, margin, border</li>
+							<li>position</li>
+							<li>floats</li>
+						</ul>
+
+					</section>
+
+				</section>
+
+				<section>
+
+					<h2>Warmup</h2>
+
+				</section>
+
+				<section>
+
+					<section>
+
+						<h2>BEM</h2>
+
+						<h3>Block Entity Modifier</h3>
+
+					</section>
+
+					<section>
+
+						<h2>Block Element Modifier</h2>
+
+						<ul>
+							<li>Block: Wiederkehrende Komponente
+								<ul>
+									<li>Suchtreffer</li>
+									<li>Info-Boxen</li>
+									<li>Overlays</li>
+								</ul>
+							</li>
+							<li>Entity: Element in dieser Komponente
+								<ul>
+									<li>Titel vom Treffer</li>
+									<li>Metadaten</li>
+									<li>Links</li>
+								</ul>
+							</li>
+							<li>Modifier: Alternativer Status der Komponente
+								<ul>
+									<li>Bereits angeklickt</li>
+									<li>Zugriff nicht möglich</li>
+									<li>Verliehen</li>
+								</ul>
+							</li>
+
+						</ul>
+
+					</section>
+					
+					<section>
+						
+						<h2>BEM: Beispiel</h2>
+
+						<img src="assets/BEM/BEM-example.png" alt="">
+						
+					</section>
+					
+					<section>
+						
+						<h2>BEM: Blocks</h2>
+
+						<img src="assets/BEM/BEM-example-blocks.png" alt="">
+						
+					</section>
+					
+					<section>
+						
+						<h2>BEM: Elements</h2>
+
+						<img src="assets/BEM/BEM-example-element.png" alt="">
+
+						<div>
+							<ul>
+								<li><code style="color: red;">.Suchtreffer__Titel</code></li>
+								<li><code style="color: green;">.Suchtreffer__Link</code></li>
+								<li><code style="color: blue;">.Suchtreffer__Translate</code></li>
+								<li><code>.Suchtreffer__Snippet</code></li>
+								<li><code style="color: violet;">.Suchtreffer__Visited_at</code></li>
+							</ul>
+						</div>
+						
+					</section>
+
+					<section>
+
+						<h2>BEM: Modifier</h2>
+
+						<img src="assets/BEM/BEM-example-modifier.png" alt="">
+
+						<div>
+							<ul>
+								<li>Alternativer Status: <code style="color: purple">.Suchtreffer--Visited</code></li>
+								<li>Normaler Status: <code style="">.Suchtreffer</code></li>
+							</ul>
+						</div>
+
+					</section>
+
+					<section>
+
+						<h2>Normales CSS</h2>
+
+						<pre><code data-code="./css/theme/04-css.css"></code>Suchtreffer Beispiel ohne BEM (fiktiv)</pre>
+
+					</section>
+
+					<section>
+
+						<h2>BEM: CSS</h2>
+
+						<pre><code data-code="./css/theme/04-bem.css"></code>Suchtreffer Beispiel mit BEM-Klassen</pre>
+
+					</section>
+
+					<section>
+
+						<h2>BEM vs. normales CSS</h2>
+
+						<table>
+							<thead>
+							<tr>
+								<th></th>
+								<th>BEM</th>
+								<th>CSS</th>
+							</tr>
+							</thead>
+							<tbody>
+							<tr>
+								<td>Konvention</td>
+								<td><i class="fa fa-smile-o"></i></td>
+								<td><i class="fa fa-meh-o"></i></td>
+							</tr>
+							<tr>
+								<td>Lesbarkeit</td>
+								<td><i class="fa fa-smile-o"></i></td>
+								<td><i class="fa fa-meh-o"></i></td>
+							</tr>
+							<tr>
+								<td>Komponentenorientiert</td>
+								<td><i class="fa fa-smile-o"></i></td>
+								<td><i class="fa fa-frown-o"></i></td>
+							</tr>
+							<tr>
+								<td>Speichereffizient</td>
+								<td><i class="fa fa-meh-o"></i></td>
+								<td><i class="fa fa-smile-o"></i></td>
+							</tr>
+							</tbody>
+						</table>
+
+					</section>
+
+					<section>
+
+						<h2>BEM: Übung</h2>
+
+						<!-- TODO: Übung implementieren -->
+
+					</section>
+
+					<section>
+
+						<h1>KAHOOT</h1>
+						<h3><a href="http://www.kahoot.it">www.kahoot.it</a></h3>
+
+					</section>
+
+				</section>
+
+				<section>
+
+					<section>
+
+						<h2>Flexbox</h2>
+
+					</section>
+
+				</section>
+
+
+				<section>
+
+					The next time on <b>EWP</b>
+
+					<p>JSON</p>
+
+				</section>
+
+
+			</div>
+
+			<div class="footer">
+				<a href="https://creativecommons.org/licenses/by/4.0/">
+					<img src="img/cc-by.png" alt="CC-BY" id="cc-logo">
+				</a>
+				Oliver Pohl, Einführung in die Webprogrammierung (SoSe 2016), Sitzung 04: BEM &amp; Flexboxes. -- <a href="http://telotadev.bbaw.de/ewp-helper/questions">Anonyme Fragen: http://goo.gl/dDkMeL</a>
+			</div>
+
+		</div>
+
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/chart/Chart.min.js' },
+					{ src: 'plugin/chart/csv2chart.js' },
+					{ src: 'plugin/externalcode/externalcode.js'},
+				],
+
+				chart: {
+					defaults: {
+						global: {
+							title: { fontColor: "#000" },
+						},
+						legend: {
+							labels: { fontColor: "#000" },
+						},
+						scale: {
+							scaleLabel: { fontColor: "#000" },
+							gridLines: { color: "#000", zeroLineColor: "#000" },
+							ticks: { fontColor: "#000" },
+						}
+					},
+					line: { borderColor: [ "rgba(20,220,220,.8)" , "rgba(220,120,120,.8)", "rgba(20,120,220,.8)" ], "borderDash": [ [5,10], [0,0] ]},
+					bar: { backgroundColor: [ "rgba(20,220,220,.8)" , "rgba(220,120,120,.8)", "rgba(20,120,220,.8)" ]},
+					pie: { backgroundColor: [ ["rgba(0,0,0,.8)" , "rgba(220,20,20,.8)", "rgba(20,220,20,.8)", "rgba(220,220,20,.8)", "rgba(20,20,220,.8)", "rgba(252,158,206, 0.8)"] ]},
+					radar: { borderColor: [ "rgba(20,220,220,.8)" , "rgba(220,120,120,.8)", "rgba(20,120,220,.8)" ]},
+				},
+
+
+			});
+
+		</script>
+
+
+	</body>
+</html>

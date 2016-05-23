@@ -1,0 +1,26 @@
+.hit {
+    max-height: 250px;
+}
+
+.hit h2{
+    font-size: 1.5em;
+    color: blue;
+}
+
+.hit.visited {
+    color: purple;
+}
+
+.hit a {
+    font-size: 0.7em;
+    color: green;
+}
+
+.hit div.snippet {
+    color: black;
+}
+
+.hit div.visited-at {
+    font-size: 0.7em;
+    color: grey;
+}
