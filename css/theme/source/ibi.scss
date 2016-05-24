@@ -101,3 +101,7 @@ body:after {
 tr.highlight {
   background: gray;
 }
+
+.Code-Example--small {
+  max-height: 250px !important;
+}

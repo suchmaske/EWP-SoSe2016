@@ -1,0 +1,22 @@
+.Flex-Container {
+    display: flex; /* Stellt Element als Flexbox dar */
+    flex-direction: row; /* Die Flexbox-Fließrichtung ist horizontal (links nach rechts) */
+}
+
+.Flex-Container--column {
+    display: flex; /* Stellt Element als Flexbox dar */
+    flex-direction: column; /* Die Flexbox-Fließrichtung ist vertikal (oben nach unten) */
+}
+
+.Flex-Container__Child {
+    flex: 1; /* Elemente im Flexbox-Container werden gleichmäßig verteilt */
+}
+
+.Flex-Container__Child--double {
+    flex: 2; /* Elemente im Flexbox-Container haben die doppelte Breite/Höhe */
+}
+
+.Flex-Container__Child--triple {
+    flex: 3; /* Elemente im Flexbox-Container haben die dreifache Breite/Höhe */
+}
+

@@ -1,0 +1,13 @@
+.Flex-Container__Child--align-end {
+    flex: 1; /* Elemente im Flexbox-Container werden gleichmäßig verteilt */
+    align-items: flex-end;
+
+}
+
+.Flex-Container__Child--justify-end {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+
+}
+

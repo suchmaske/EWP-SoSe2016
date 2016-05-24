@@ -1,0 +1,16 @@
+.Flex-Container {
+    display: flex; /* Stellt Element als Flexbox dar */
+    flex-direction: row; /* Die Flexbox-Fließrichtung ist horizontal (links nach rechts) */
+}
+
+.Flex-Container--column {
+    display: flex; /* Stellt Element als Flexbox dar */
+    flex-direction: column; /* Die Flexbox-Fließrichtung ist vertikal (oben nach unten) */
+}
+
+
+.Flex-Container__Child {
+    flex: 1; /* Elemente im Flexbox-Container werden gleichmäßig verteilt */
+}
+
+

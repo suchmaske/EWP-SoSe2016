@@ -20,6 +20,9 @@
 		<link rel="stylesheet" href="css/theme/03-id.css">
 		<link rel="stylesheet" href="css/theme/03-margin.css">
 		<link rel="stylesheet" href="css/theme/03-padding.css">
+		<link rel="stylesheet" href="css/theme/04-flexbox-example.css">
+		<link rel="stylesheet" href="css/theme/04-flexbox-flex-n.css">
+		<link rel="stylesheet" href="css/theme/04-flexbox-justify-align.css">
 		<link rel="stylesheet" href="plugin/font-awesome/css/font-awesome.min.css">
 
 		<!-- Code syntax highlighting -->
@@ -379,6 +382,202 @@ Divs haben einen äußeren Abstand von 10 Pixeln zu allen Seiten.</pre>
 						<h2>Flexbox</h2>
 
 					</section>
+
+					<section>
+
+						<h2>Floats</h2>
+
+						<div class="Code-Example__Code">
+<pre><code class="Code--html" data-trim data-noescape>Jelly-o tootsie roll topping danish jelly-o bonbon caramels. Carrot Cake
+<span class="custom-span" style="float: right">
+	ice cream cookie
+</span>
+halvah dessert cupcake tart.
+Jelly oat cake jujubes sesame snaps cookie fruitcake.
+</code></pre>
+						</div>
+
+						<div class="Code-Example__Result">
+							Jelly-o tootsie roll topping danish jelly-o bonbon caramels. Carrot Cake
+<span class="custom-span" style="float: right">
+	ice cream cookie
+</span>
+							halvah dessert cupcake tart.
+							Jelly oat cake jujubes sesame snaps cookie fruitcake.
+						</div>
+
+					</section>
+
+					<section>
+
+						<h2>Flexbox: Beispiel</h2>
+
+						<div class="Flex-Container Flex-Container--main">
+
+							<div class="Flex-Container__Child"></div>
+							<div class="Flex-Container__Child Flex-Container--column">
+
+								<div class="Flex-Container__Child"></div>
+								<div class="Flex-Container__Child Flex-Container">
+									<div class="Flex-Container__Child teal"></div>
+									<div class="Flex-Container__Child teal"></div>
+									<div class="Flex-Container__Child teal"></div>
+								</div>
+								<div class="Flex-Container__Child Flex-Container">
+
+									<div class="Flex-Container__Child teal"></div>
+									<div class="Flex-Container__Child teal"></div>
+
+								</div>
+
+							</div>
+
+						</div>
+
+						<pre><code data-code="./sessions/04/flexbox-example.html"></code></pre>
+
+					</section>
+
+					<section>
+
+						<h2>Flexbox: Beispiel</h2>
+
+						<div class="Flex-Container Flex-Container--main">
+
+							<div class="Flex-Container__Child"></div>
+							<div class="Flex-Container__Child Flex-Container--column">
+
+								<div class="Flex-Container__Child"></div>
+								<div class="Flex-Container__Child Flex-Container">
+									<div class="Flex-Container__Child teal"></div>
+									<div class="Flex-Container__Child teal"></div>
+									<div class="Flex-Container__Child teal"></div>
+								</div>
+								<div class="Flex-Container__Child Flex-Container">
+
+									<div class="Flex-Container__Child teal"></div>
+									<div class="Flex-Container__Child teal"></div>
+
+								</div>
+
+							</div>
+
+						</div>
+
+						<pre><code data-code="./css/theme/04-flexbox-example.css"></code></pre>
+
+					</section>
+
+					<section>
+
+						<h2>Flexbox Aufbau</h2>
+
+						<pre><code data-code="./sessions/04/flexbox-example.html" class="Code-Example--small"></code></pre>
+
+						<pre><code data-code="./css/theme/04-flexbox-aufbau.css" class="Code-Example--small"></code></pre>
+
+					</section>
+
+					<section>
+
+						<h2><code>flex: n;</code></h2>
+
+						<div class="Flex-Container Flex-Container--main">
+
+							<div class="Flex-Container__Child"></div>
+							<div class="Flex-Container__Child Flex-Container--column">
+
+								<div class="Flex-Container__Child"></div>
+								<div class="Flex-Container__Child Flex-Container">
+									<div class="Flex-Container__Child teal"></div>
+									<div class="Flex-Container__Child teal"></div>
+									<div class="Flex-Container__Child teal"></div>
+								</div>
+								<div class="Flex-Container__Child Flex-Container">
+
+									<div class="Flex-Container__Child teal"></div>
+									<div class="Flex-Container__Child teal"></div>
+
+								</div>
+
+							</div>
+
+						</div>
+
+						<pre><code data-code="./css/theme/04-flexbox-flex-n.css" class="Code-Example--small"></code></pre>
+
+					</section>
+
+					<section>
+
+						<h2><code>align-items</code></h2>
+
+						<ul>
+							<li>flex-start, flex-end, center, stretch</li>
+						</ul>
+
+						<div class="Flex-Container Flex-Container--main">
+
+							<div class="Flex-Container__Child Flex-Container__Child--align-end ">Block</div>
+							<div class="Flex-Container__Child Flex-Container__Child--align-end  Flex-Container--column">
+
+								<div class="Flex-Container__Child Flex-Container__Child--align-end ">Block</div>
+								<div class="Flex-Container__Child Flex-Container__Child--align-end  Flex-Container">
+									<div class="Flex-Container__Child Flex-Container__Child--align-end teal">A</div>
+									<div class="Flex-Container__Child Flex-Container__Child--align-end teal">B</div>
+									<div class="Flex-Container__Child Flex-Container__Child--align-end teal">C</div>
+								</div>
+								<div class="Flex-Container__Child Flex-Container">
+
+									<div class="Flex-Container__Child Flex-Container__Child--align-end teal">1</div>
+									<div class="Flex-Container__Child Flex-Container__Child--align-end teal">2</div>
+
+								</div>
+
+							</div>
+
+						</div>
+
+						<pre><code data-code="./css/theme/04-flexbox-justify-align.css"></code></pre>
+
+					</section>
+
+					<section>
+
+						<h2><code>justify-content</code></h2>
+
+						<ul>
+							<li>flex-start, flex-end, center, space-between, space-around</li>
+							<li>Element muss <code>display: flex;</code> haben</li>
+						</ul>
+
+						<div class="Flex-Container Flex-Container--main">
+
+							<div class="Flex-Container__Child Flex-Container__Child--justify-end ">Block</div>
+							<div class="Flex-Container__Child Flex-Container__Child--justify-end  Flex-Container--column">
+
+								<div class="Flex-Container__Child Flex-Container__Child--justify-end ">Block</div>
+								<div class="Flex-Container__Child Flex-Container__Child--justify-end  Flex-Container">
+									<div class="Flex-Container__Child Flex-Container__Child--justify-end  teal">A</div>
+									<div class="Flex-Container__Child Flex-Container__Child--justify-end  teal">B</div>
+									<div class="Flex-Container__Child Flex-Container__Child--justify-end  teal">C</div>
+								</div>
+								<div class="Flex-Container__Child Flex-Container__Child--justify-end  Flex-Container">
+
+									<div class="Flex-Container__Child Flex-Container__Child--justify-end  teal">1</div>
+									<div class="Flex-Container__Child Flex-Container__Child--justify-end  teal">2</div>
+
+								</div>
+
+							</div>
+
+						</div>
+
+						<pre><code data-code="./css/theme/04-flexbox-justify-align.css"></code></pre>
+
+					</section>
+
+
 
 				</section>
 

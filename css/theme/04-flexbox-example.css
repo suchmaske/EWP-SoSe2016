@@ -1,0 +1,29 @@
+.Flex-Container--main {
+    min-height: 150px;
+    min-width: 550px;
+}
+
+.Flex-Container {
+    display: flex;
+    flex-direction: row;
+    background: tan;
+}
+
+.Flex-Container__Child {
+    flex: 1;
+    border: 1px solid #2e2e2e !important;
+}
+
+.Flex-Container__Child:hover {
+    background: lightcoral;
+}
+
+.Flex-Container--column {
+    display: flex;
+    flex-direction: column;
+    background: teal;
+}
+
+.teal {
+    background: teal;
+}
