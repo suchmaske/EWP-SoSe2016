@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="de">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>EWP: JSON</title>
+
+		<meta name="description" content="Einführung in die Webprogrammierung SoSe 2016. Sitzung 05: JSON">
+		<meta name="author" content="Oliver Pohl">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/ibi.css" id="theme">
+		<link rel="stylesheet" href="css/theme/03-classes.css">
+		<link rel="stylesheet" href="css/theme/03-id.css">
+		<link rel="stylesheet" href="css/theme/03-margin.css">
+		<link rel="stylesheet" href="css/theme/03-padding.css">
+		<link rel="stylesheet" href="css/theme/04-flexbox-example.css">
+		<link rel="stylesheet" href="css/theme/04-flexbox-flex-n.css">
+		<link rel="stylesheet" href="css/theme/04-flexbox-justify-align.css">
+		<link rel="stylesheet" href="plugin/font-awesome/css/font-awesome.min.css">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+
+		<script src="js/jquery-1.11.1.min.js"></script>
+		<script src="js/ibi.js"></script>
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+
+				<section>
+
+					<h2>Einführung in die Webprogrammierung</h2>
+					<h4>Sitzung 05: JSON</h4>
+					<h4>Oliver Pohl: <a href="mailto:opohl@bbaw.de">opohl@bbaw.de</a></h4>
+
+				</section>
+
+				<section>
+
+					<section>
+						<h2>Agenda: JSON</h2>
+
+						<ul>
+							<li>Was ist JSON?</li>
+							<li>Wozu wird es genutzt?</li>
+							<li>Syntax</li>
+							<li>Zugriff auf Datenstruktur</li>
+						</ul>
+					</section>
+
+				</section>
+
+				<section>
+
+					<h2>Warmup</h2>
+
+				</section>
+
+				<section>
+
+					<section>
+
+						<h2>JSON</h2>
+
+						<p>JavaScript Object Notation</p>
+
+						<hr>
+
+						<h3>Ziel</h3>
+
+						<p>Strukturierte Daten in JavaScript nutzen</p>
+
+					</section>
+
+					<section>
+
+						<h2>JSON</h2>
+
+						<ul>
+							<li>Einfacher zu verarbeiten als XML</li>
+							<li>Einfacher Aufbau</li>
+							<li>Einfache Syntax</li>
+							<li>Einfacher Zugriff &amp; Manipulation</li>
+							<li>Im Programmieralltag häufig genutzt</li>
+						</ul>
+
+					</section>
+
+					<section>
+
+						<h2>JSON - Syntax</h2>
+
+						<p>Key-Value-Prinzip</p>
+
+						<pre><code data-code="./sessions/05/json/einfache-syntax.json"></code>Einfache JSON-Syntax</pre>
+
+						<ul>
+							<li>Alle Daten müssen von {} umschlossen sein</li>
+							<li>Keys <strong>können</strong> in Anführungszeichen stehen, müssen aber nicht</li>
+							<li>Values <strong>müssen</strong> in Anführungszeichen stehen, außer sie sind Zahlen</li>
+							<li>Nach jedem Key-Value-Pair folgt ein Komma, außer beim letzten</li>
+							<li>Zur Leserlichkeit: Key-Value-Pairs einrücken</li>
+						</ul>
+
+					</section>
+
+					<section>
+
+						<h2>Beispiel - Person</h2>
+
+						<pre><code data-code="./sessions/05/md/beispiel-person.md"></code>Daten als einfache Text-Struktur</pre>
+
+						<pre><code data-code="./sessions/05/xml/beispiel-person.xml"></code>Daten als XML</pre>
+
+						<pre><code data-code="./sessions/05/json/beispiel-person.json"></code>Daten als JSON</pre>
+
+					</section>
+
+					<section>
+
+						<h2>Kurzübung 1</h2>
+
+						<h3><a href="http://www.jsoneditoronline.org/?id=2f4bc8cc6c1fdc218c9bc7c5bc8e7575">http://goo.gl/tJ8Reg</a></h3>
+
+						<p>JSON-Objekt über euch selbst erstellen (oder fiktive Person)</p>
+
+						<ul>
+							<li>Name</li>
+							<li>Alter</li>
+							<li>Rolle ( = Teilnehmer)</li>
+						</ul>
+
+					</section>
+
+					<section>
+
+						<h2>Kurzübung</h2>
+
+						<p>Folgende Datenstruktur nach JSON übertragen</p>
+
+						<pre><code data-code="./sessions/05/md/beispiel-enton.md"></code></pre>
+
+						<pre class="fragment"><code data-code="./sessions/05/json/beispiel-enton.json"></code></pre>
+
+					</section>
+
+					<section>
+
+						<h1>KAHOOT</h1>
+						<h3><a href="http://www.kahoot.it">www.kahoot.it</a></h3>
+
+					</section>
+
+
+				</section>
+
+
+				<section>
+
+					The next time on <b>EWP</b>
+
+					<p>JSON</p>
+
+				</section>
+
+
+			</div>
+
+			<div class="footer">
+				<a href="https://creativecommons.org/licenses/by/4.0/">
+					<img src="img/cc-by.png" alt="CC-BY" id="cc-logo">
+				</a>
+				Oliver Pohl, Einführung in die Webprogrammierung (SoSe 2016), Sitzung 04: BEM &amp; Flexboxes. -- <a href="http://telotadev.bbaw.de/ewp-helper/questions">Anonyme Fragen: http://goo.gl/dDkMeL</a>
+			</div>
+
+		</div>
+
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/chart/Chart.min.js' },
+					{ src: 'plugin/chart/csv2chart.js' },
+					{ src: 'plugin/externalcode/externalcode.js'},
+				],
+
+				chart: {
+					defaults: {
+						global: {
+							title: { fontColor: "#000" },
+						},
+						legend: {
+							labels: { fontColor: "#000" },
+						},
+						scale: {
+							scaleLabel: { fontColor: "#000" },
+							gridLines: { color: "#000", zeroLineColor: "#000" },
+							ticks: { fontColor: "#000" },
+						}
+					},
+					line: { borderColor: [ "rgba(20,220,220,.8)" , "rgba(220,120,120,.8)", "rgba(20,120,220,.8)" ], "borderDash": [ [5,10], [0,0] ]},
+					bar: { backgroundColor: [ "rgba(20,220,220,.8)" , "rgba(220,120,120,.8)", "rgba(20,120,220,.8)" ]},
+					pie: { backgroundColor: [ ["rgba(0,0,0,.8)" , "rgba(220,20,20,.8)", "rgba(20,220,20,.8)", "rgba(220,220,20,.8)", "rgba(20,20,220,.8)", "rgba(252,158,206, 0.8)"] ]},
+					radar: { borderColor: [ "rgba(20,220,220,.8)" , "rgba(220,120,120,.8)", "rgba(20,120,220,.8)" ]},
+				},
+
+
+			});
+
+		</script>
+
+
+	</body>
+</html>
