@@ -1,0 +1,31 @@
+<actor>
+    <name>Leonardo DiCaprio</name>
+    <birthday>
+        <year>1974</year>
+        <month>11</month>
+        <day>11</day>
+    </birthday>
+    <nicknames>
+        <nickname>Leo</nickname>
+        <nickname>Lenny D</nickname>
+    </nicknames>
+    <oscar>true</oscar>
+    <movies>
+        <movie>
+            <name>The Revenant</name>
+            <year>2015</year>
+            <role>Hugh Glass</role>
+        </movie>
+        <movie>
+            <name>The Wolf of Wall Street</name>
+            <year>2013</year>
+            <role>Jordan Belfort</role>
+        </movie>
+        <movie>
+            <name>Django Unchained</name>
+            <year>2012</year>
+            <role>Calvin Candie</role>
+        </movie>
+    </movies>
+    <imdb>http://www.imdb.com/name/nm0000138/</imdb>
+</actor>

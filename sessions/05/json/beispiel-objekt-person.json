@@ -1,0 +1,9 @@
+{
+  name: "Oliver Pohl",
+  age: 25,
+  classes : {
+    name: "EWP",
+    day: "Thu",
+    time : "12-14"
+  }
+}

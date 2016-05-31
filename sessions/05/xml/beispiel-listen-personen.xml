@@ -1,0 +1,12 @@
+<personen>
+    <person>
+        <name>Oliver Pohl</name>
+        <age>25</age>
+        <role>Dozent</role>
+    </person>
+    <person>
+        <name>En Ton</name>
+        <age>4</age>
+        <role>Teilnehmer</role>
+    </person>
+</personen>

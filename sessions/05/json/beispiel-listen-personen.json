@@ -1,0 +1,12 @@
+[
+  {
+    name : "Oliver Pohl",
+    age : 25,
+    role : "Dozent"
+  },
+  {
+    name : "En Ton",
+    age : 4,
+    role : "Teilnehmer"
+  }
+]

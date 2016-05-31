@@ -179,12 +179,282 @@
 
 				</section>
 
+				<section>
+
+					<section>
+
+						<h2>JSON</h2>
+
+						<h3>Komplexe Datenstrukturen</h3>
+
+					</section>
+
+					<section>
+
+						<h2>Listen: Plain und XML</h2>
+
+						<pre><code data-code="./sessions/05/md/beispiel-listen-personen.md"></code></pre>
+
+						<pre><code data-code="./sessions/05/xml/beispiel-listen-personen.xml"></code></pre>
+
+					</section>
+
+					<section>
+
+						<h2>Liste von JSON-Objekten</h2>
+
+						<pre><code data-code="./sessions/05/json/beispiel-listen-personen.json"></code></pre>
+
+						<ul>
+							<li>Liste durch <code>[ ]</code> gekennzeichnet</li>
+							<li>Nach jedem Listeneintrag folgt ein Komma, außer beim letzten</li>
+						</ul>
+
+					</section>
+
+					<section>
+
+						<h2>Liste an Werten</h2>
+
+						<pre><code data-code="./sessions/05/md/beispiel-listen-smartphone.md"></code></pre>
+
+						<pre><code data-code="./sessions/05/xml/beispiel-listen-smartphone.xml"></code></pre>
+
+					</section>
+
+					<section>
+
+						<h2>Liste an Werten in JSON</h2>
+
+						<pre><code data-code="./sessions/05/json/beispiel-listen-smartphone.json"></code></pre>
+
+						<ul>
+							<li>Werte in einer Liste können einfache Werte, weitere Listen oder JSON-Objekte sein</li>
+							<li>Aber: Zur Übersicht und Funktionalität sollte der Datentyp gleich sein</li>
+						</ul>
+
+
+					</section>
+
+					<section>
+
+						<h2>Geschachtelte Strukturen</h2>
+
+						<pre><code data-code="./sessions/05/md/beispiel-objekt-person.md"></code></pre>
+
+						<pre><code data-code="./sessions/05/xml/beispiel-objekt-person.xml"></code></pre>
+
+					</section>
+
+					<section>
+
+						<h2>Geschachtelte Strukturen in JSON</h2>
+
+						<pre><code data-code="./sessions/05/json/beispiel-objekt-person.json"></code></pre>
+
+						<ul>
+							<li>JSON-Objekte können beliebig tief geschachtelt werden</li>
+						</ul>
+
+					</section>
+
+					<section>
+
+						<h2>Kurzübung</h2>
+
+						<h3><a href="http://www.jsoneditoronline.org/?id=2f4bc8cc6c1fdc218c9bc7c5bc8e7575">http://goo.gl/tJ8Reg</a></h3>
+
+						<p>JSON-Objekt aus vorigen Übungen erweitern</p>
+
+						<ul>
+							<li>Name</li>
+							<li>Alter</li>
+							<li>Liste an Kursen [{}, {}]
+								<ul>
+									<li>Kursname</li>
+									<li>Tag</li>
+									<li>Uhrzeit</li>
+								</ul>
+							</li>
+						</ul>
+
+					</section>
+
+					<section>
+
+						<h1>KAHOOT</h1>
+						<h3><a href="http://www.kahoot.it">www.kahoot.it</a></h3>
+
+					</section>
+
+				</section>
+
+				<section>
+
+					<section>
+
+						<h2>JSON-Werte zugreifen</h2>
+
+						<p>Zwei Syntaxvarianten</p>
+
+						<ul>
+							<li>Dot-Syntax: <code>jsonObject.key</code></li>
+							<li>Bracket-Syntax: <code>jsonObject["key"]</code></li>
+						</ul>
+
+					</section>
+
+					<section>
+
+						<h2>Dot-Syntax</h2>
+
+						<pre><code data-code="./sessions/05/json/beispiel-objekt-person.json"></code>Annahme: Die Daten sind in einer Variable namens oli gespeichert.</pre>
+
+						<table style="font-size: 0.7em;">
+							<thead>
+							<tr>
+								<th>Accessor</th>
+								<th>Value</th>
+							</tr>
+							</thead>
+							<tr>
+								<td><code>oli.name</code></td>
+								<td>"Oliver Pohl"</td>
+							</tr>
+							<tr>
+								<td><code>oli.age</code></td>
+								<td>25</td>
+							</tr>
+							<tr>
+								<td><code>oli.class.name</code></td>
+								<td>"EWP"</td>
+							</tr>
+							<tr>
+								<td><code>oli.class.day</code></td>
+								<td>"Thu"</td>
+							</tr>
+							<tr>
+								<td><code>oli.class.time</code></td>
+								<td>"12-14"</td>
+							</tr>
+							<tr>
+								<td><code>oli.class.role</code></td>
+								<td>Dozent</td>
+							</tr>
+						</table>
+
+					</section>
+
+					<section>
+
+						<h2>Bracket-Syntax</h2>
+
+						<pre><code data-code="./sessions/05/json/beispiel-objekt-person.json"></code>Annahme: Die Daten sind in einer Variable namens oli gespeichert.</pre>
+
+						<table style="font-size: 0.7em;">
+							<thead>
+							<tr>
+								<th>Accessor</th>
+								<th>Value</th>
+							</tr>
+							</thead>
+							<tr>
+								<td><code>oli["name"]</code></td>
+								<td>"Oliver Pohl"</td>
+							</tr>
+							<tr>
+								<td><code>oli["age"]</code></td>
+								<td>25</td>
+							</tr>
+							<tr>
+								<td><code>oli["class"]["name"]</code></td>
+								<td>"EWP"</td>
+							</tr>
+							<tr>
+								<td><code>oli["class"]["day"]</code></td>
+								<td>"Thu"</td>
+							</tr>
+							<tr>
+								<td><code>oli["class"]["time"]</code></td>
+								<td>"12-14"</td>
+							</tr>
+							<tr>
+								<td><code>oli["class"]["role"]</code></td>
+								<td>Dozent</td>
+							</tr>
+						</table>
+
+					</section>
+
+					<section>
+
+						<h2>Listen-Werte zugreifen</h2>
+
+						<pre><code data-code="./sessions/05/json/beispiel-listen-smartphone.json"></code>Annahme: Die Daten sind in einer Variable namens smartphone gespeichert</pre>
+
+						<table style="font-size: 0.7em;">
+							<thead>
+							<tr>
+								<th>Accessor</th>
+								<th>Value</th>
+							</tr>
+							</thead>
+							<tr>
+								<td><code>oli["farben"][0]</code></td>
+								<td>"schwarz"</td>
+							</tr>
+							<tr>
+								<td><code>oli["farben"][1]</code></td>
+								<td>"silber"</td>
+							</tr>
+							<tr>
+								<td><code>oli["farben"][2]</code></td>
+								<td>"rosegold"</td>
+							</tr>
+						</table>
+
+
+						<ul style="font-size: 0.7em;">
+							<li>0 &rightarrow; 1. Eintrag</li>
+							<li>1 &rightarrow; 2. Eintrag</li>
+							<li>usw.</li>
+						</ul>
+
+
+					</section>
+
+					<section>
+
+						<h2>Kurzübung</h2>
+
+						<!-- TODO: JSON vordefinieren und bestimmte Werte zugreifen lassen-->
+
+					</section>
+
+					<section>
+
+						<h1>KAHOOT</h1>
+						<h3><a href="http://www.kahoot.it">www.kahoot.it</a></h3>
+
+					</section>
+
+				</section>
+
+				<section>
+
+					<section>
+
+
+					</section>
+
+				</section>
+
 
 				<section>
 
 					The next time on <b>EWP</b>
 
-					<p>JSON</p>
+					<p>JavaScript &amp; jQuery</p>
 
 				</section>
 

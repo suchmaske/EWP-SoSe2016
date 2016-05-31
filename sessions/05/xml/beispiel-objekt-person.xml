@@ -1,0 +1,10 @@
+<person>
+    <name>Oliver Pohl</name>
+    <age>25</age>
+    <class>
+        <name>EWP</name>
+        <day>Thu</day>
+        <time>12-14</time>
+        <role>Dozent</role>
+    </class>
+</person>
