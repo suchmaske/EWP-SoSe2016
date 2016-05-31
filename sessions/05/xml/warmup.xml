@@ -1,0 +1,17 @@
+<obst>
+    <name>Apfel</name>
+    <form>rund</form>
+    <gewicht>0.15</gewicht>
+    <sorten>
+        <sorte>
+            <name>Granny Smith</name>
+            <farbe>grün</farbe>
+            <preis>1.50</preis>
+        </sorte>
+        <sorte>
+            <name>Kiku</name>
+            <farbe>rot</farbe>
+            <preis>2</preis>
+        </sorte>
+    </sorten>
+</obst>

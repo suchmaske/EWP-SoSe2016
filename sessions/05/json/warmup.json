@@ -1,0 +1,25 @@
+{
+
+  name: "Apfel",
+
+  form: "rund",
+
+  gewicht: 0.15,
+
+  sorten : [
+
+    {
+      name: "Granny Smith",
+      preis: 1.5,
+      farbe: "grün"
+    },
+
+    {
+      name: "Kiku",
+      preis: 2,
+      farbe: "rot"
+    }
+
+  ]
+
+}
