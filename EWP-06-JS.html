@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="de">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>EWP: JSON</title>
+
+		<meta name="description" content="Einführung in die Webprogrammierung SoSe 2016. Sitzung 06: JS">
+		<meta name="author" content="Oliver Pohl">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/ibi.css" id="theme">
+		<link rel="stylesheet" href="plugin/font-awesome/css/font-awesome.min.css">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+
+		<script src="js/jquery-1.11.1.min.js"></script>
+		<script src="js/ibi.js"></script>
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+
+				<section>
+
+					<h2>Einführung in die Webprogrammierung</h2>
+					<h4>Sitzung 06: JS</h4>
+					<h4>Oliver Pohl: <a href="mailto:opohl@bbaw.de">opohl@bbaw.de</a></h4>
+
+				</section>
+
+				<section>
+
+					<section>
+						<h2>Agenda: JS</h2>
+
+						<ul>
+							<li>Was ist JavaScript?</li>
+							<li>Was ist jQuery?</li>
+							<li>Wie benutzt man JavaScript?</li>
+							<li>Wie manipuliert man Webseiten?</li>
+						</ul>
+					</section>
+
+				</section>
+
+				<section>
+
+					<h2>Warmup</h2>
+
+				</section>
+
+				<section>
+
+					<section>
+
+						<h2>JavaScript</h2>
+
+					</section>
+
+					<section data-markdown>
+
+						<script>
+							## Nutzen
+
+							* Webseitenelementen Funktionen verleihen
+							* Webseiten animieren
+							* Webseiten dynamisch aufbauen und ändern
+						</script>
+
+					</section>
+
+					<section data-markdown="">
+					    <script>
+							##  Einbindungsmöglichkeiten
+
+							|                 | Inline | Head | Extern |
+							|:----------------|
+							| Trennung        | -      | -    | +      |
+							| Nachnutzbarkeit | -      | -    | +      |
+							| (bei vue.js)    | +      | +    | +      |
+
+							* vue.js später
+					    </script>
+					</section>
+
+					<section>
+
+						<h2>Einbindung Inline</h2>
+
+						<ul>
+							<li>Code direkt im HTML-Elementen</li>
+							<li>Keine Trennung von HTML und JS</li>
+							<li>Schlechte Nachnutzbarkeit in größeren (und kleineren) Projekten</li>
+						</ul>
+
+						<div class="Code-Example Code-Example--html">
+							<div class="Code-Example__Code">
+								<pre><code data-code="./sessions/06/JS-Inline.html"></code></pre>
+							</div>
+
+							<div class="Code-Example__Result">
+
+								<button onclick="alert('hi');">Press me!</button>
+
+							</div>
+						</div>
+
+					</section>
+					
+					<section>
+
+						<h2>Einbindung im Head</h2>
+
+						<ul>
+							<li>Code ans HTML-Dokument gebunden</li>
+							<li>Schlechte Nachnutzbarkeit in größeren Projekten</li>
+						</ul>
+
+						<div class="Code-Example Code-Example--html">
+							<div class="Code-Example__Code">
+									<pre><code data-code="./sessions/06/JS-Head.html"></code></pre>
+							</div>
+
+							<div class="Code-Example__Result">
+
+								<button onclick="alert('hi');">Press me!</button>
+
+							</div>
+						</div>
+
+					</section>
+					
+					<section>
+
+						<h2>Einbindung Extern</h2>
+
+						<pre><code data-code="./sessions/06/JS-Extern.html"></code>Head eines HTML-Dokuments</pre>
+						
+						<pre><code data-code="./sessions/06/JS-Extern.js"></code>Inhalt von my.js (im Head referenziert)</pre>
+
+						<ul>
+							<li>Code in externer Datei</li>
+							<li>Trennung in HTML und JS</li>
+							<li>Gute Nachnutzbarkeit in größeren Projekten</li>
+						</ul>
+
+					</section>
+
+					<section data-markdown="">
+						<script>
+							##  Einbindungsmöglichkeiten
+
+							|                 | Inline | Head | Extern |
+							|:----------------|
+							| Trennung        | -      | -    | +      |
+							| Nachnutzbarkeit | -      | -    | +      |
+							| (bei vue.js)    | +      | +    | +      |
+
+						</script>
+					</section>
+
+				</section>
+
+				<section>
+
+					<section>
+
+						<h2>jQuery</h2>
+
+					</section>
+
+					<section data-markdown="">
+					    <script>
+							## jQuery nutzen
+
+
+							* In diesem Seminar: Fokus auf jQuery
+							* JavaScript-Bibliothek (Zusatzfunktionen)
+							* Mehr Funktionen
+							* Einfacherere Syntax
+					    </script>
+					</section>
+					
+					<section>
+
+						<h2>JavaScript vs. jQuery</h2>
+
+
+
+					</section>
+
+					<section>
+
+						<h1>KAHOOT</h1>
+						<h3><a href="http://www.kahoot.it">www.kahoot.it</a></h3>
+
+					</section>
+
+				</section>
+
+
+
+			</div>
+
+			<div class="footer">
+				<a href="https://creativecommons.org/licenses/by/4.0/">
+					<img src="img/cc-by.png" alt="CC-BY" id="cc-logo">
+				</a>
+				Oliver Pohl, Einführung in die Webprogrammierung (SoSe 2016), Sitzung 04: BEM &amp; Flexboxes. -- <a href="http://telotadev.bbaw.de/ewp-helper/questions">Anonyme Fragen: http://goo.gl/dDkMeL</a>
+			</div>
+
+		</div>
+
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/chart/Chart.min.js' },
+					{ src: 'plugin/chart/csv2chart.js' },
+					{ src: 'plugin/externalcode/externalcode.js'},
+				],
+
+				chart: {
+					defaults: {
+						global: {
+							title: { fontColor: "#000" },
+						},
+						legend: {
+							labels: { fontColor: "#000" },
+						},
+						scale: {
+							scaleLabel: { fontColor: "#000" },
+							gridLines: { color: "#000", zeroLineColor: "#000" },
+							ticks: { fontColor: "#000" },
+						}
+					},
+					line: { borderColor: [ "rgba(20,220,220,.8)" , "rgba(220,120,120,.8)", "rgba(20,120,220,.8)" ], "borderDash": [ [5,10], [0,0] ]},
+					bar: { backgroundColor: [ "rgba(20,220,220,.8)" , "rgba(220,120,120,.8)", "rgba(20,120,220,.8)" ]},
+					pie: { backgroundColor: [ ["rgba(0,0,0,.8)" , "rgba(220,20,20,.8)", "rgba(20,220,20,.8)", "rgba(220,220,20,.8)", "rgba(20,20,220,.8)", "rgba(252,158,206, 0.8)"] ]},
+					radar: { borderColor: [ "rgba(20,220,220,.8)" , "rgba(220,120,120,.8)", "rgba(20,120,220,.8)" ]},
+				},
+
+
+			});
+
+		</script>
+
+
+	</body>
+</html>
