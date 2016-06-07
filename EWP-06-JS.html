@@ -210,7 +210,33 @@
 
 						<h2>JavaScript vs. jQuery</h2>
 
+						<pre><code data-code="./sessions/06/JS-js-vs-jquery-js.js"></code>Element in Variable speichern (reines JavaScript)</pre>
+						<pre><code data-code="./sessions/06/JS-js-vs-jquery-jquery.js"></code>Element in Variable speichern (jQuery)</pre>
 
+
+						<ul>
+							<li>Gleiche Selektor-Syntax wie CSS </li>
+							<li>Gleiche Hierarchien</li>
+							<li>Einfachere Syntax</li>
+							<li><pre><code>$("button") == jquery("button")</code></pre></li>
+						</ul>
+
+					</section>
+
+					<section>
+
+						<h2>jQuery einbinden</h2>
+
+						<p>jQuery ist eine JavaScript-Bibliothek</p>
+
+						<ul>
+							<li>jQuery muss abgerufen werden</li>
+							<li>jQuery herunterladen, im Projekt speichern und einbinden</li>
+							<li>jQuery über CDN abrufen</li>
+						</ul>
+						
+						<pre><code data-code="./sessions/06/JS-jquery-einbinden.html"></code>jQuery als lokale Datei einbinden</pre>
+						<pre><code data-code="./sessions/06/JS-jquery-cdn.html"></code>jQuery dynamisch einbinden</pre>
 
 					</section>
 
@@ -222,6 +248,250 @@
 					</section>
 
 				</section>
+
+				<section>
+
+					<section>
+
+						<h2>Variablen &amp; Datentypen</h2>
+
+						<ul>
+							<li>Deklaration mit <code>let</code> oder <code>var</code></li>
+							<li>Unterschied: Reichweite der Variable</li>
+							<li>Damals: <code>var</code> (auch noch gültig)</li>
+							<li>Heute: <code>let</code></li>
+							<li><pre><code>let varName = "wert";</code></pre></li>
+						</ul>
+
+					</section>
+
+					<section data-markdown="">
+						<script>
+							## Variablen Deklaration Beispiel
+```
+let numberOfBalls = 3;
+let myName = "Oliver Pohl";
+let isDozent = true;
+```
+						</script>
+					</section>
+
+					<section data-markdown="">
+					    <script>
+							## Datentypen 1
+
+							* Strings: In Anführungszeichen setzen: ' oder "
+								- ```"hello"```
+								- ```'hallo'```
+								- ```"'hello'"```
+							* Integers: Ganze Zahlen (positiv oder negativ)
+								- ```1```
+								- ```999```
+								- ```-5```
+								- ```0```
+					    </script>
+					</section>
+					
+					<section data-markdown="">
+					    <script>
+							## Datentypen 2
+							* Boolean: Wahr oder Falsch
+								- ```true``` (wahr)
+								- ```false``` (falsch, nicht wahr)
+							* Listen
+								- ```[1, 2, "a", "b"]```
+							* Objekte
+								- ```{a : 1, b : 2}```
+					    </script>
+					</section>
+					
+					<section data-markdown="">
+					    <script>
+							## Daten auslesen und schreiben
+
+							Textinhalt aus dem Button-Element auslesen
+
+							```
+							<button>Hallo!</button>
+							```
+
+							```
+							let btnText = $("button").text();
+							// btnText = "Hallo!"
+							```
+
+							Textinhalt des Button-Elements ändern
+
+							```
+							$("button").text("Please don't click me!");
+							```
+
+							```
+							<button>Please don't click me!"</button>
+							```
+
+
+					    </script>
+					</section>
+
+					<section data-markdown="">
+					    <script>
+							## console.log
+
+							* Entwicklertools im Browser öffnen (F12)
+							* Konsolen-Tab öffnen
+							* Output von console.log-Befehlen wird dort angezeigt
+							* Konsole kann interaktiv benutzt werden
+
+							```
+							console.log("hi");
+							```
+					    </script>
+					</section>
+
+					<section data-markdown="">
+					    <script>
+							## Variablen überschreiben / ändern
+
+							```
+							let i = 1;
+							i = i + 1;
+							// i ist jetzt 2
+							```
+					    </script>
+					</section>
+
+					<section data-markdown="">
+						<!-- TODO: Übung implementieren-->
+					    <script>
+							### Kurzübung
+
+							[Test](http://www.google.de)
+
+							* Variable anlegen
+							* Button-Text befüllen
+							* Bei Click auf Button: Buttoninhalt ändern
+					    </script>
+					</section>
+
+				</section>
+
+				<section>
+
+					<section data-markdown="">
+						<script>
+							## Bedingungen
+
+
+							* Überprüfen, ob eine Bedindung zutrifft
+							* if: Wenn ja, mache etwas
+							* if else: Falls nicht, aber etwas anderes zutrifft, mache etwas anderes
+							* else: Falls nichts zutrifft, mache etwas anderes
+						</script>
+					</section>
+					
+					<section data-markdown="">
+					    <script>
+							## If
+
+							Überprüfen, ob eine Bedingung zutrifft
+
+							```
+							if (3 == 3)
+							{
+								console.log("Diese Aussage ist wahr")
+							}
+							```
+
+					    </script>
+					</section>
+
+					<section data-markdown="">
+					    <script>
+							## else
+
+							* Wenn die Haupt-Bedingung nicht zutrifft
+							* Und auch keine Alternativ-Bedindung zutrifft
+							* If-Statement davor ist notwendig
+							* Optional
+
+							```
+							let i = 3;
+
+							if (i == 4)
+							{
+								console.log("Diese Aussage ist wahr");
+							}
+
+							else
+							{
+								console.log("Diese Aussage ist falsch");
+							}
+							```
+					    </script>
+					</section>
+					
+					<section data-markdown="">
+					    <script>
+							## else if
+
+							* Wenn die Haupt-Bedingung nicht zutrifft,
+							* Aber eine Alternativ-Bedingung zutrifft
+							* If-Statement davor und else-Statement danach sind notwendig
+							* Optional
+
+							```
+							let i = 3;
+
+							if (i == 4)
+							{
+								console.log("i ist 4");
+							}
+
+							else if (i == 3)
+							{
+								console.log("i ist 3");
+							}
+
+							else
+							{
+								console.log("i ist etwas anderes als 3 oder 4");
+							}
+							```
+					    </script>
+					</section>
+
+					<section data-markdown="">
+						<!-- TODO: Übung implementieren -->
+					    <script>
+							## Kurzübung: if
+
+							* Variable mit ganzer Zahl definieren
+							* Bei einem Button-Klick überprüfen, ob Zahl größer, kleiner oder gleich 5 ist
+							* Ergebnis entsprechend anzeigen
+					    </script>
+					</section>
+
+				</section>
+
+				<section>
+
+					<section data-markdown="">
+						<script>
+							## Hausaufgabe 10
+						</script>
+					</section>
+
+					<section data-markdown="">
+						<script>
+							## Hausaufgabe 10
+						</script>
+					</section>
+
+				</section>
+
+
+
 
 
 
