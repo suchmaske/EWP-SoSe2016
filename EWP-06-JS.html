@@ -157,16 +157,32 @@
 					
 					<section>
 
-						<h2>Einbindung Extern</h2>
+						<h2>Einbindung Extern (im Head)</h2>
 
-						<pre><code data-code="./sessions/06/JS-Extern.html"></code>Head eines HTML-Dokuments</pre>
+						<pre><code data-code="./sessions/06/JS-Extern-head.html"></code>Head eines HTML-Dokuments</pre>
 						
-						<pre><code data-code="./sessions/06/JS-Extern.js"></code>Inhalt von my.js (im Head referenziert)</pre>
+						<pre><code data-code="./sessions/06/JS-Extern-head.js"></code>Inhalt von my.js (im Head referenziert)</pre>
 
 						<ul>
-							<li>Code in externer Datei</li>
-							<li>Trennung in HTML und JS</li>
-							<li>Gute Nachnutzbarkeit in größeren Projekten</li>
+							<li>Verlinkung im Head ist okay</li>
+							<li>Erfordert extra-Befehle im JS-Script für die richtige ausführen</li>
+							<li>Kein direkter DOM-Zugriff (Zugriff auf HTML-Struktur)</li>
+						</ul>
+
+					</section>
+
+					<section>
+
+						<h2>Einbindung Extern (im Body)</h2>
+
+						<pre><code data-code="./sessions/06/JS-Extern-body.html"></code>Ein HTML-Dokument</pre>
+
+						<pre><code data-code="./sessions/06/JS-Extern-body.js"></code>Inhalt von my.js (im Body referenziert)</pre>
+
+						<ul>
+							<li>Verlinkung am Ende des Bodys ist besser</li>
+							<li>DOM-Zugriff direkt möglich</li>
+							<li>Daher keine extra-Befehle nötig</li>
 						</ul>
 
 					</section>
@@ -235,8 +251,16 @@
 							<li>jQuery über CDN abrufen</li>
 						</ul>
 						
+
+					</section>
+
+					<section>
+
+						<h2>Einbindung lokal vs. CDN</h2>
+
 						<pre><code data-code="./sessions/06/JS-jquery-einbinden.html"></code>jQuery als lokale Datei einbinden</pre>
 						<pre><code data-code="./sessions/06/JS-jquery-cdn.html"></code>jQuery dynamisch einbinden</pre>
+
 
 					</section>
 
@@ -362,11 +386,10 @@ let isDozent = true;
 					</section>
 
 					<section data-markdown="">
-						<!-- TODO: Übung implementieren-->
 					    <script>
 							### Kurzübung
 
-							[Test](http://www.google.de)
+							[http://goo.gl/HPPqLg](http://jsbin.com/tiwaliwuvo/edit?html,js,output)
 
 							* Variable anlegen
 							* Button-Text befüllen
@@ -465,6 +488,8 @@ let isDozent = true;
 						<!-- TODO: Übung implementieren -->
 					    <script>
 							## Kurzübung: if
+
+							[http://goo.gl/Q83L9z](http://jsbin.com/hiqecoxute/edit?html,js,output)
 
 							* Variable mit ganzer Zahl definieren
 							* Bei einem Button-Klick überprüfen, ob Zahl größer, kleiner oder gleich 5 ist
