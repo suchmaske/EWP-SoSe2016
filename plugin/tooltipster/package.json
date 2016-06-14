@@ -1,0 +1,79 @@
+{
+  "_args": [
+    [
+      "tooltipster",
+      "/home/suchmaske/Lehre/EWP-SoSe2016"
+    ]
+  ],
+  "_from": "tooltipster@latest",
+  "_id": "tooltipster@1.0.9",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/tooltipster",
+  "_npmUser": {
+    "email": "contest.start@gmail.com",
+    "name": "ocean"
+  },
+  "_npmVersion": "1.4.23",
+  "_phantomChildren": {},
+  "_requested": {
+    "name": "tooltipster",
+    "raw": "tooltipster",
+    "rawSpec": "",
+    "scope": null,
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/tooltipster/-/tooltipster-1.0.9.tgz",
+  "_shasum": "765eb061bca755bee2c8c0bb7b5d39f963176e31",
+  "_shrinkwrap": null,
+  "_spec": "tooltipster",
+  "_where": "/home/suchmaske/Lehre/EWP-SoSe2016",
+  "author": {
+    "name": "Louis Ameline"
+  },
+  "bugs": {
+    "url": "https://github.com/eHanlin/tooltipster/issues"
+  },
+  "dependencies": {
+    "jquery": "2.1.1"
+  },
+  "description": "tooltipster",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "765eb061bca755bee2c8c0bb7b5d39f963176e31",
+    "tarball": "https://registry.npmjs.org/tooltipster/-/tooltipster-1.0.9.tgz"
+  },
+  "gitHead": "c90edb13de0eff42f407e3749f304d5a74de2f42",
+  "homepage": "https://github.com/eHanlin/tooltipster",
+  "keywords": [
+    "tooltipster",
+    "tooltip"
+  ],
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://www.opensource.org/licenses/mit-license.php"
+    }
+  ],
+  "main": "js/jquery.tooltipster.js",
+  "maintainers": [
+    {
+      "email": "contest.start@gmail.com",
+      "name": "ocean"
+    }
+  ],
+  "name": "tooltipster",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eHanlin/tooltipster.git"
+  },
+  "scripts": {},
+  "version": "1.0.9"
+}
