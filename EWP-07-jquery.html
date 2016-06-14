@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="de">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>EWP: jQuery Libraries</title>
+
+		<meta name="description" content="Einführung in die Webprogrammierung SoSe 2016. Sitzung 07: jQuery Libraries">
+		<meta name="author" content="Oliver Pohl">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/ibi.css" id="theme">
+		<link rel="stylesheet" href="plugin/font-awesome/css/font-awesome.min.css">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+
+		<script src="js/jquery-1.11.1.min.js"></script>
+		<script src="js/ibi.js"></script>
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+
+				<section>
+
+					<h2>Einführung in die Webprogrammierung</h2>
+					<h4>Sitzung 07: jQuery Libraries</h4>
+					<h4>Oliver Pohl: <a href="mailto:opohl@bbaw.de">opohl@bbaw.de</a></h4>
+
+				</section>
+
+				<section>
+
+					<section>
+						<h2>Agenda</h2>
+
+						<ul>
+							<li>Korrektur</li>
+							<li>Wiederholung JS</li>
+							<li>DataTables</li>
+							<li>Tooltipster</li>
+						</ul>
+					</section>
+
+				</section>
+				
+				<section>
+					
+					<section data-markdown="">
+					    <script>
+					    ## Korrektur
+					    </script>
+					</section>
+					
+					<section data-markdown="">
+					    <script>
+							## JSON-Keys
+
+							* Keys müssen *immer* in Anführungszeichen stehen!
+							* Andernfalls können Konflikte im JS auftreten
+							* (Kein Abzug in der Hausaufgabe)
+					    </script>
+					</section>
+
+					<section data-markdown="">
+					    <script>
+							## Doctype
+
+							* HTML5-Doctype: ```<!doctype html>```
+					    </script>
+					</section>
+					
+				</section>
+				
+
+				<section>
+
+					<h2>Warmup</h2>
+
+					<p>JS-Memory</p>
+
+				</section>
+
+				<section>
+
+					<section data-markdown="">
+						<script>
+							## Wiederholung JavaScript
+						</script>
+					</section>
+
+					<section>
+
+						<h2>Einbindung Extern (im Body)</h2>
+
+						<pre><code data-code="./sessions/06/JS-Extern-body.html"></code>Ein HTML-Dokument</pre>
+
+						<pre><code data-code="./sessions/06/JS-Extern-body.js"></code>Inhalt von my.js (im Body referenziert)</pre>
+
+						<ul>
+							<li>Verlinkung am Ende des Bodys ist besser</li>
+							<li>DOM-Zugriff direkt möglich</li>
+							<li>Daher keine extra-Befehle nötig</li>
+						</ul>
+
+					</section>
+
+					<section data-markdown="">
+						<script>
+							## Variablen Deklaration Beispiel
+							```
+							let numberOfBalls = 3;
+							let myName = "Oliver Pohl";
+							let isDozent = true;
+							```
+						</script>
+					</section>
+
+					<section data-markdown="">
+						<script>
+							## Daten auslesen und schreiben
+
+							Textinhalt aus dem Button-Element auslesen
+
+							```
+							<button>Hallo!</button>
+							```
+
+							```
+							let btnText = $("button").text();
+							// btnText = "Hallo!"
+							```
+
+							Textinhalt des Button-Elements ändern
+
+							```
+							$("button").text("Please don't click me!");
+							```
+
+							```
+							<button>Please don't click me!"</button>
+							```
+
+
+						</script>
+					</section>
+
+					<section data-markdown="">
+						<script>
+							## Bedingungen
+
+
+							* Überprüfen, ob eine Bedindung zutrifft
+							* if: Wenn ja, mache etwas
+							* if else: Falls nicht, aber etwas anderes zutrifft, mache etwas anderes
+							* else: Falls nichts zutrifft, mache etwas anderes
+						</script>
+					</section>
+
+				</section>
+
+				<section>
+
+					<section data-markdown="">
+					    <script>
+						## jQuery Libraries
+
+					    </script>
+					</section>
+
+					<section data-markdown="">
+					    <script>
+						## Überblick
+
+						* Viele Programmierprobleme sind bereits gelöst
+						* jQuery hat JS-Programmierung vereinfacht
+						* Andere Libraries vereinfachen andere Probleme
+					    </script>
+					</section>
+
+					<section data-markdown="">
+					    <script>
+						## Wie finden?
+
+						* Google
+						* StackOverflow
+						* npm (nächste Stunde & HA)
+						* bower
+					    </script>
+					</section>
+
+					<section data-markdown="">
+					    <script>
+						## Wie einbinden?
+
+						* Die meisten Libraries benötigen jQuery
+						* jQuery muss vor der Library geladen werden
+
+						*Reihenfolge*:
+						1. jQuery
+						2. Libraries
+						3. Eigener Code
+					    </script>
+					</section>
+
+				</section>
+
+				<section>
+
+					<section data-markdown="">
+					    <script>
+						## DataTables
+
+						* jQuery-Library
+						* statische HTML-Tabellen interaktiv machen
+						* Tabellen aus JSON generieren
+						* Sortierung
+						* Filterung
+						* Paginierung
+					    </script>
+					</section>
+
+					<section>
+
+						<h2>Wiederholung: Einbindung von JS (Body)</h2>
+
+						<pre><code data-code="./sessions/06/JS-Extern-body.html"></code>Ein HTML-Dokument</pre>
+
+					</section>
+
+				</section>
+
+
+				
+
+
+
+
+
+
+			</div>
+
+			<div class="footer">
+				<a href="https://creativecommons.org/licenses/by/4.0/">
+					<img src="img/cc-by.png" alt="CC-BY" id="cc-logo">
+				</a>
+				Oliver Pohl, Einführung in die Webprogrammierung (SoSe 2016), Sitzung 07: jQuery Libraries. -- <a href="http://telotadev.bbaw.de/ewp-helper/questions">Anonyme Fragen: http://goo.gl/dDkMeL</a>
+			</div>
+
+		</div>
+
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/chart/Chart.min.js' },
+					{ src: 'plugin/chart/csv2chart.js' },
+					{ src: 'plugin/externalcode/externalcode.js'},
+				],
+
+				chart: {
+					defaults: {
+						global: {
+							title: { fontColor: "#000" },
+						},
+						legend: {
+							labels: { fontColor: "#000" },
+						},
+						scale: {
+							scaleLabel: { fontColor: "#000" },
+							gridLines: { color: "#000", zeroLineColor: "#000" },
+							ticks: { fontColor: "#000" },
+						}
+					},
+					line: { borderColor: [ "rgba(20,220,220,.8)" , "rgba(220,120,120,.8)", "rgba(20,120,220,.8)" ], "borderDash": [ [5,10], [0,0] ]},
+					bar: { backgroundColor: [ "rgba(20,220,220,.8)" , "rgba(220,120,120,.8)", "rgba(20,120,220,.8)" ]},
+					pie: { backgroundColor: [ ["rgba(0,0,0,.8)" , "rgba(220,20,20,.8)", "rgba(20,220,20,.8)", "rgba(220,220,20,.8)", "rgba(20,20,220,.8)", "rgba(252,158,206, 0.8)"] ]},
+					radar: { borderColor: [ "rgba(20,220,220,.8)" , "rgba(220,120,120,.8)", "rgba(20,120,220,.8)" ]},
+				},
+
+
+			});
+
+		</script>
+
+
+	</body>
+</html>
