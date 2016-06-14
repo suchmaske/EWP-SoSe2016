@@ -385,7 +385,9 @@
 							<li>DataTables mit Daten aus Variable initialisieren</li>
 						</ul>
 
-						<pre><code data-code="sessions/07/datatables/js/dataTables-beispiel-live.js"></code>Inhalt von my.js</pre>
+						<pre><code>$("#poketable").DataTable({
+  "aaData" : pokemon
+});</code></pre>
 
 					</section>
 
@@ -400,7 +402,149 @@
 
 				<section>
 
+					<section data-markdown="">
+					    <script>
+							## Tooltipster
 
+							Webseite: http://iamceege.github.io/tooltipster/
+
+							* jQuery-Plugin
+							* Tooltips stylen
+							* Tooltips interaktiv machen
+							* Tooltips auf Mobile Devices ermöglichen
+					    </script>
+					</section>
+
+					<section>
+
+						<h2>Tooltips</h2>
+
+						<p title="Das hier!">Was sind Tooltips?</p>
+
+						<p><em>Mini-Overlays beim Hover-Event</em></p>
+						
+						<pre><code data-code="sessions/07/tooltipster/tooltip-beispiel.html"></code></pre>
+
+						<ul>
+							<li>title-Attribut erstellt Tooltip</li>
+							<li>Inhalt des title-Attributs wird als Tooltip angezeigt</li>
+						</ul>
+
+					</section>
+
+					<section data-markdown="">
+					    <script>
+							## Tooltipster einbinden
+
+							**DataTables braucht eigenes CSS (im Head):**
+							1. (CSS-Frameworks)
+							2. Tooltipster & andere Libraries
+							3. Eigene Stylesheets
+
+							**Reihenfolge der Skripte (im Body):**
+							1. jQuery
+							2. Tooltipster & andere Libraries
+							3. Eigene Skripte
+					    </script>
+					</section>
+
+					<section>
+						
+						<h2>Tooltipster: Einfaches Beispiel</h2>
+						
+						<pre><code data-code="sessions/07/tooltipster/tooltipster-beispiel-code.html"></code></pre>
+
+						<pre><code data-code="sessions/07/tooltipster/js/tooltipster-beispiel-live.js"></code></pre>
+
+						<p><a href="sessions/07/tooltipster/tooltipster-beispiel-live.html" target="_blank">Resultat</a></p>
+
+					</section>
+
+					<section>
+
+						<h2>Tooltipster: HTML-Tooltip</h2>
+
+						<pre><code data-code="sessions/07/tooltipster/tooltipster-html-code.html"></code></pre>
+
+						<pre><code data-code="sessions/07/tooltipster/js/tooltipster-html-live.js"></code></pre>
+
+					</section>
+
+					<section>
+						
+						<h2>Tooltipster: HTML-Tooltip</h2>
+
+						<ul>
+							<li><a href="sessions/07/tooltipster/tooltipster-html-code.html" target="_blank">Ohne Tooltipster</a></li>
+							<li><a href="sessions/07/tooltipster/tooltipster-html-live.html" target="_blank">Mit Tooltipster</a></li>
+						</ul>
+						
+					</section>
+
+					<section>
+
+						<h2>Tooltipster: Übung</h2>
+
+						<h3><a href="http://jsbin.com/gizazuzoco/edit?html,js,output">http://goo.gl/gWSNSD</a></h3>
+
+						<ul>
+							<li>Tooltip vergeben</li>
+							<li>Tooltipster aktivieren</li>
+						</ul>
+
+					</section>
+
+					<section>
+
+						<h2>Tooltipster: HTML-Tooltip Übung</h2>
+
+						<h3><a href="http://jsbin.com/decixevija/edit?html,js,output">http://goo.gl/oXMHFc</a></h3>
+
+						<ul>
+							<li>Tooltipster aktivieren</li>
+							<li>Tooltipinhalt ausfüllen</li>
+							<li>Tooltipinhalt zuweisen</li>
+						</ul>
+
+					</section>
+
+					<section>
+
+						<h1>KAHOOT</h1>
+						<h3><a href="http://www.kahoot.it">www.kahoot.it</a></h3>
+
+					</section>
+
+				</section>
+
+				<section>
+
+					<section data-markdown="">
+					    <script>
+					    ## Hausaufgaben
+					    </script>
+					</section>
+
+					<section data-markdown="">
+					    <script>
+					    ## Hausaufgabe 13
+
+						* Tabelle in HTML erstellen (nur Kopf)
+						* 10 Lieblingsfilme in externe JSON-Datei
+						* Tabelle mit DataTables und JSON-Datei befüllen
+						* HTML-Tooltipster mit Filmplakat
+					    </script>
+					</section>
+
+					<section data-markdown="">
+					    <script>
+					    ## Hausaufgabe 14
+
+						* Git installieren
+						* Node.js installieren
+						* Screenshots hochladen
+					    </script>
+					</section>
 
 				</section>
 
