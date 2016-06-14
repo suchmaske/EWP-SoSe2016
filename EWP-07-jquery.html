@@ -235,6 +235,8 @@
 					    <script>
 						## DataTables
 
+						Webseite: https://datatables.net/
+
 						* jQuery-Library
 						* statische HTML-Tabellen interaktiv machen
 						* Tabellen aus JSON generieren
@@ -252,13 +254,106 @@
 
 					</section>
 
+					<section data-markdown="">
+						<script>
+							## DataTables einbinden
+
+							**DataTables braucht eigenes CSS (im Head):**
+							1. (CSS-Frameworks)
+							2. DataTables & andere Libraries
+							3. Eigene Stylesheets
+
+							**Reihenfolge der Skripte (im Body):**
+							1. jQuery
+							2. DataTables & andere Libraries
+							3. Eigene Skripte
+						</script>
+					</section>
+
+					<section>
+						
+						<h2>DataTables einbinden: HTML</h2>
+						
+						<pre><code data-code="./sessions/07/datatables/dataTables-einbinden.html"></code></pre>
+						
+					</section>
+
+					<section>
+
+						<h2>DataTables: Beispieltabelle</h2>
+
+						<pre><code data-code="sessions/07/datatables/dataTables-beispiel-code.html"></code></pre>
+
+						<p><a href="sessions/07/datatables/dataTables-beispiel-live.html" target="_blank">Tabelle mit und ohne DataTables</a></p>
+
+
+					</section>
+					
+					<section>
+						
+						<h2>DataTables: Initialisierung</h2>
+
+						<pre><code data-code="sessions/07/datatables/dataTables-beispiel-code.html"></code>HTML-Seite mit Tabelle</pre>
+
+						<pre><code data-code="sessions/07/datatables/js/dataTables-beispiel-live.js"></code>Inhalt von my.js</pre>
+						
+					</section>
+					
+					<section>
+					
+					    <h2>DataTables: Übung</h2>
+
+						<h3><a href="http://jsbin.com/larigohiqo/edit?html,js,output">http://goo.gl/m5TkHP</a></h3>
+
+						<ul>
+							<li>Tabelle erstellen</li>
+							<li>DataTables initialisieren</li>
+						</ul>
+						
+						<pre><code data-code="sessions/07/datatables/js/dataTables-beispiel-live.js"></code>Inhalt von my.js</pre>
+
+					</section>
+
+					<section data-markdown="">
+					    <script>
+					    ## DataTables: JSON
+
+						* Entweder: HTML-Tabelle vorgenerieren
+						* Oder: Dynamisch mit Daten aus JSON befüllen
+					    </script>
+					</section>
+
+					<section>
+
+						<h2>DataTables via JSON</h2>
+
+						<pre><code data-code="sessions/07/datatables/dataTables-json-code.html"></code>HTML-Seite mit Tabellenkopf, aber ohne Body</pre>
+
+						<pre><code data-code="sessions/07/datatables/js/dataTables-json-live.js"></code>Inhalt von my.js</pre>
+
+					</section>
+
+					<section>
+
+						<h2>DataTables via JSON</h2>
+
+						<pre><code data-code="sessions/07/datatables/js/dataTables-json-live.js"></code>Inhalt von my.js</pre>
+
+						<pre><code data-code="sessions/07/datatables/data/pokemon.json"></code>Inhalt von pokemon.json</pre>
+
+					</section>
+
+					<section>
+
+						<h2>DataTables via JSON</h2>
+
+						<p><a href="sessions/07/datatables/dataTables-json-live.html" target="_blank">Resultat</a></p>
+
+					</section>
+
+
+
 				</section>
-
-
-				
-
-
-
 
 
 
@@ -272,6 +367,7 @@
 			</div>
 
 		</div>
+
 
 
 		<script src="lib/js/head.min.js"></script>
