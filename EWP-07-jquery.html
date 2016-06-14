@@ -320,12 +320,14 @@
 
 						* Entweder: HTML-Tabelle vorgenerieren
 						* Oder: Dynamisch mit Daten aus JSON befüllen
+							- JSON-Datei
+							- Objekt-Variable
 					    </script>
 					</section>
 
 					<section>
 
-						<h2>DataTables via JSON</h2>
+						<h2>DataTables via JSON-Datei</h2>
 
 						<pre><code data-code="sessions/07/datatables/dataTables-json-code.html"></code>HTML-Seite mit Tabellenkopf, aber ohne Body</pre>
 
@@ -335,7 +337,7 @@
 
 					<section>
 
-						<h2>DataTables via JSON</h2>
+						<h2>DataTables via JSON-Datei</h2>
 
 						<pre><code data-code="sessions/07/datatables/js/dataTables-json-live.js"></code>Inhalt von my.js</pre>
 
@@ -345,11 +347,58 @@
 
 					<section>
 
-						<h2>DataTables via JSON</h2>
+						<h2>DataTables via JSON-Datei</h2>
 
 						<p><a href="sessions/07/datatables/dataTables-json-live.html" target="_blank">Resultat</a></p>
 
 					</section>
+
+					<section>
+
+					    <h2>DataTables via JSON-Variable</h2>
+
+						<pre><code data-code="sessions/07/datatables/js/dataTables-aaData-live.js"></code>Inhalt von my.js</pre>
+
+						<p><a href="sessions/07/datatables/dataTables-aaData-live.html" target="_blank">Resultat</a></p>
+
+					</section>
+
+
+					<section data-markdown="">
+					    <script>
+							| **Art**                | **tbody** | **Parameter (JS)** | **Param.-Wert (JS)** |
+							|:-----------------------|
+							| HTML vorgeneriert      | ja        | -                  | -                    |
+							| Dynamisch aus Datei    | nein      | ajax               | Dateipfad als String |
+							| Dynamisch aus Variable | nein      | aaData             | JSON-Array           |
+					    </script>
+					</section>
+
+					<section>
+
+						<h2>DataTables: JSON-Übung</h2>
+
+						<h3><a href="http://jsbin.com/lazaduwima/edit?html,js,output">http://goo.gl/H3mFfA</a></h3>
+
+						<ul>
+							<li>JSON-Array vervollständigen</li>
+							<li>DataTables mit Daten aus Variable initialisieren</li>
+						</ul>
+
+						<pre><code data-code="sessions/07/datatables/js/dataTables-beispiel-live.js"></code>Inhalt von my.js</pre>
+
+					</section>
+
+					<section>
+
+						<h1>KAHOOT</h1>
+						<h3><a href="http://www.kahoot.it">www.kahoot.it</a></h3>
+
+					</section>
+
+				</section>
+
+				<section>
 
 
 
