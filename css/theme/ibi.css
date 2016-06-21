@@ -336,3 +336,7 @@ tr.highlight {
 
 .Code-Example--small {
   max-height: 250px !important; }
+
+.small-table table, .small-table p {
+  font-size: 0.8em;
+}

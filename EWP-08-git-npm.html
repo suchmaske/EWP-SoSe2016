@@ -1,0 +1,623 @@
+<!doctype html>
+<html lang="de">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>EWP: git and npm</title>
+
+		<meta name="description" content="Einführung in die Webprogrammierung SoSe 2016. Sitzung 08: git and npm">
+		<meta name="author" content="Oliver Pohl">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/ibi.css" id="theme">
+		<link rel="stylesheet" href="plugin/font-awesome/css/font-awesome.min.css">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+
+		<script src="js/jquery-1.11.1.min.js"></script>
+		<script src="js/ibi.js"></script>
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+
+				<section>
+
+					<h2>Einführung in die Webprogrammierung</h2>
+					<h4>Sitzung 08: git &amp; npm</h4>
+					<h4>Oliver Pohl: <a href="mailto:opohl@bbaw.de">opohl@bbaw.de</a></h4>
+
+				</section>
+
+				<section>
+
+					<section>
+						<h2>Agenda</h2>
+
+						<ul>
+							<li>Warmup</li>
+							<li>git</li>
+							<li>npm</li>
+							<li>Bonus: Browserify</li>
+						</ul>
+					</section>
+
+				</section>
+				
+				<section data-markdown="">
+				    <script>
+						## Warmup
+
+						* Vokabelkarten
+						* Lückentext
+				    </script>
+				</section>
+				
+				<section>
+				
+					
+					<section data-markdown="">
+					    <script>
+							## Git
+
+							Versionskontrolle
+					    </script>
+					</section>
+					
+					<section data-markdown="">
+					    <script>
+							## Namensgebung
+
+							* Entwickelt von Linus Torvalds
+							* Entwickler von Linux
+							* Git = Idiot
+							* Eigenbenennung
+					    </script>
+					</section>
+					
+					<section data-markdown="">
+					    <script>
+							## Nutzen
+
+							* Versionsverwaltung von Dateien
+							* Programmieren im Team
+							* Branching & Merging
+					    </script>
+					</section>
+					
+					<section data-markdown="">
+					    <script>
+							## Repositories
+
+							* Zentrales Verzeichnis des VCS
+							* Möglichkeiten
+							* Lokal: Terminal, GitLab
+							* Server: Terminal, GitLab
+							* Service: **Github**, BitBucket
+					    </script>
+					</section>
+					
+					<section data-markdown="" class="small-table">
+						<script>
+							## Einfacher Workflow
+							| **Befehl**       | **Nutzen**                          | **Von**       | **Nach**      |
+							|:-----------------|
+							| ```git init```   | Zentrales Repository initialisieren | Remote Origin |               |
+							| ```git clone```  | Repository duplizieren              | Remote Origin | Working Dir   |
+							||
+							| ```git add```    | Änderungen hinzufügen/vermerken     | Working Dir   | Staging       |
+							| ```git commit``` | Änderungen lokal abspeichern        | Staging       | Lokales .git  |
+							| ```git push```   | Änderungen hochladen                | Lokales .git  | Remote Origin |
+
+							Tutorial: https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow
+					    </script>
+					</section>
+					
+					
+					<section data-markdown="">
+					    <script>
+							## Repository initialisieren
+
+							*Nicht nachmachen*
+
+							```
+							$ mkdir myProject
+							$ cd myProject
+							$ git init --bare
+							```
+					    </script>
+					</section>
+					
+					<section data-markdown="">
+					    <script>
+							## Repository auf GitHub anlegen
+
+							[Github](https://github.com/)
+
+							* Online-Service um git-Repositories zu hosten
+							* Quellcode im Browser ansehen und durchsuchen
+							* Repositories erstellen: Anmeldung notwendig
+							* Klonen: Anonym
+					    </script>
+					</section>
+
+					<section data-markdown="">
+					    <script>
+							### Repository Klonen: git clone
+
+							* Das Repository wird 1:1 kopiert (geklont)
+
+							Generell
+							```
+							$ git clone [Git-Repo-URL]
+							```
+
+							Hier
+							```
+							$ git clone https://github.com/suchmaske/EWP-Git-Example.git
+							```
+					    </script>
+					</section>
+					
+					<section data-markdown="">
+					    <script>
+							## Arbeit beginnen
+
+							* Neue Dateien erstellen
+							* Dateien bearbeiten
+							* Änderungen machen
+							* usw.
+						</script>
+					</section>
+
+					<section data-markdown="">
+					    <script>
+							## Dateien ignorieren: .gitignore
+
+							* Nicht alle Dateien sollen nachverfolgt werden
+							* Beispiel: ```node_modules``` (JS- und CSS-Abhängigkeiten)
+							* Im Projektverzeichnis die Datei ```.gitignore``` anlegen
+							* Dateien und Verzeichnisse auflisten, die ignoriert werden sollen
+
+							Inhalt von .gitignore
+							```
+							ignoreMe.txt
+							node_modules/*
+							```
+					    </script>
+					</section>
+
+					<section data-markdown="">
+					    <script>
+							## Änderungen speichern: git commit
+
+							* Änderungen werden in einer lokalen DB gespeichert (in .git)
+							* Zwischen-Status des Projekts, der später wieder abgerufen werden kann
+							* Commit-Nachricht zwingend notwendig
+							* Commit-Nachricht sollte Änderungen zusammenfassen
+
+							```
+							$ git commit -m "My commit message"
+							```
+					    </script>
+					</section>
+
+
+					<section data-markdown="">
+						<script>
+							## Änderungen hochladen: git push
+
+							* Änderungen ins zentrale Repository hochladen
+							* Commits vorher notwendig
+
+							```
+							$ git push origin master
+							```
+						</script>
+					</section>
+
+					<section data-markdown="">
+						<script>
+							## Änderungen herunterladen: git pull
+
+							* Mehrere Klone an verschiedenen Orten
+							* Aktuelle Änderungen holen und lokale Kopie updaten
+
+							```
+							$ git pull
+							```
+						</script>
+					</section>
+
+					<section data-markdown="">
+						<script>
+							## Übung: Git
+
+							* Auf Github anmelden
+							* https://github.com/suchmaske/EWP-Git-Example
+							* Repository forken (Button oben rechts)
+							* Repository klonen
+							* Änderungen in ```index.html``` implementieren
+							* Änderungen hochspielen
+						</script>
+					</section>
+
+					<section data-markdown="">
+						<script>
+							## Branching: git branch & git checkout
+
+							* Abzweigung vom aktuellen Code erstellen
+							* Gut für Team-Arbeiten
+							* Einzelne Probleme in eigener Branch bearbeiten
+
+							Alle Branches auflisten
+							```
+							$ git branch
+							```
+
+							Neue Branch erstellen
+							```
+							$ git branch [branch-name]
+							```
+
+							Zur Branch wechseln
+							```
+							$ git checkout [branch-name]
+							```
+						</script>
+					</section>
+
+					<section data-markdown="">
+						<script>
+							### Historie anzeigen: git log
+
+							* Alle Commits ausgeben lassen
+
+							```
+							$ git log
+							```
+						</script>
+					</section>
+
+					<section data-markdown="">
+						<script>
+							## Cheatsheet
+
+							Übersicht über die gängigsten Git-Befehle
+
+							https://services.github.com/kit/downloads/github-git-cheat-sheet.pdf
+						</script>
+					</section>
+
+					<section>
+
+						<h1>KAHOOT</h1>
+						<h3><a href="http://www.kahoot.it">www.kahoot.it</a></h3>
+
+					</section>
+					
+				</section>
+
+				<section>
+
+					<section data-markdown="">
+					    <script>
+					        ## npm
+					    </script>
+					</section>
+
+					<section data-markdown="">
+					    <script>
+							## Node.js
+
+							https://nodejs.org
+
+									* Leichtgewichtige Serversoftware
+							* Laufzeitumgebung für JS-Projekte
+							* Schnell Web-Projekte erstellen
+							* **Paketverwaltung** für JS- und CSS-Bibliotheken: ```npm```
+					    </script>
+					</section>
+
+					<section data-markdown="">
+					    <script>
+							## npm
+
+							https://www.npmjs.com/
+
+									* npm: Node Package Manager
+							* Abhängigkeiten verwalten
+							* **JS- und CSS-Bibliotheken installieren**
+							* Neue node-Module erstellen
+					    </script>
+					</section>
+					
+					<section data-markdown="">
+					    <script>
+							## npm: Paket installieren
+
+							* Installierte Pakete werden im Verzeichnis ```node_modules``` gespeichert
+
+							Generische Syntax
+							```
+							$ npm install [module_name]
+							```
+
+							jQuery installieren
+							```
+							$ npm install jquery
+							```
+					    </script>
+					</section>
+
+					<section data-markdown="">
+					    <script>
+							## npm: Abhängigkeiten verwalten
+
+							* Abhängigkeit: Bibliothek, die vom eigenen Code nachgenutzt wird
+							* Beispiele: jQuery, Tooltipster, DataTables
+							* Verwaltung in einer JSON-Datei: ```package.json```
+					    </script>
+					</section>
+
+					<section data-markdown="">
+					    <script>
+							## npm: Anwendung
+
+							Inhalt von package.json ohne Abhängigkeiten
+							```
+							{}
+							```
+
+							jQuery installieren und Abhängigkeit merken
+							```
+							$ npm install jquery --save
+							```
+
+							Inhalt von package.json mit Abhängkeiten
+							```
+							{
+							  "dependencies": {
+								"jquery": "^3.0.0"
+							  }
+							}
+							```
+					    </script>
+					</section>
+					
+					<section data-markdown="">
+					    <script>
+							## Wdh. - Dateien ignorieren: .gitignore
+
+							* Nicht alle Dateien sollen nachverfolgt werden
+							* Beispiel: ```node_modules``` (JS- und CSS-Abhängigkeiten)
+							* Im Projektverzeichnis die Datei ```.gitignore``` anlegen
+							* Dateien und Verzeichnisse auflisten, die ignoriert werden sollen
+
+							Inhalt von .gitignore
+							```
+							ignoreMe.txt
+							node_modules/*
+							```
+					    </script>
+					</section>
+
+					<section data-markdown="">
+						<script>
+							## npm: Abhängigkeiten installieren
+
+							* Verwaltung der Abhängigkeiten im Git-Repo ist unnötig
+							* Abhängigkeiten können einfach nachinstalliert werden
+							* ```npm``` greift auf ```package.json``` zu
+
+							jQuery wird anhand von package.json installiert
+							```
+							$ git clone https://github.com/suchmaske/EWP-Git-Example.git
+							$ cd EWP-Git-Example
+							$ npm install
+							```
+
+							Installation von Abhängigkeiten
+							```
+							$ npm install
+							```
+						</script>
+					</section>
+
+					<section data-markdown="">
+					    <script>
+							##  AMOR - Node nicht vorhanden
+
+							* node und npm sind nicht auf AMOR installiert
+					    </script>
+					</section>
+
+					<section>
+
+					    <h2>npm: Module nutzen</h2>
+
+						<ul>
+							<li>Relative Dateipfade zur Datei herstellen</li>
+							<li>Dateipfade genau untersuchen!</li>
+						</ul>
+
+						<pre><code><script src="js/jquery.min.js"></script></code>Statt JS-Verzeichnis</pre>
+
+						<pre><code><script src="node_modules/jquery/dist/jquery.min.js"></script></code>Libraries aus node_modules holen</pre>
+
+					</section>
+					
+					<section data-markdown="">
+					    <script>
+							## Übung: npm
+
+							* Git-Repo klonen: https://github.com/suchmaske/EWP-npm-Example.git
+									* Mit npm installieren
+							* jquery
+							* datatables
+							* In index.html: jquery und datatables einbinden
+							* Tipp: Siehe <head>
+					    </script>
+					</section>
+
+				</section>
+
+				<section>
+
+					<section data-markdown="">
+					    <script>
+							## Bonus: browserify
+
+							* JS-Abhängigkeiten direkt im eigenen JS-Code deklarieren
+							* Mit ```browserify``` Abhängigkeiten und Code zusammenkompilieren
+							* Für Bonus-Hausaufgabe
+					    </script>
+					</section>
+
+					<section data-markdown="">
+					    <script>
+							## browserify installieren
+
+							Browserify installieren (global)
+							```
+							$ npm install -g browserify
+							```
+
+							Auf Linux installieren
+							```
+							$ sudo npm install -g browserify
+							```
+					    </script>
+					</section>
+
+					<section>
+
+					    <h2>browserify Beispiel</h2>
+
+						<pre>
+<code><!-- Content -->
+
+<script src="js/bundle.js"></script></code>Inhalt eines HTML-Bodys</pre>
+
+						<pre><code>var $ = require("jquery");
+global.jQuery = $;
+var dt = require( 'datatables.net' )( window, $ );
+
+$("table").DataTable();</code>Inhalt einer JS-Datei, die Abhängigkeiten aufruft</pre>
+
+					</section>
+
+					<section data-markdown="">
+					    <script>
+					        ## browserify ausführen
+
+							Generelle browserify-syntax
+							```
+							$ browserify [input-file] -o [output-file]
+							```
+
+							bundle.js aus app.js via browserify erstellen
+							```
+							$ browserify app.js -o bundle.js
+							```
+					    </script>
+					</section>
+
+				</section>
+
+
+
+
+			</div>
+
+			<div class="footer">
+				<a href="https://creativecommons.org/licenses/by/4.0/">
+					<img src="img/cc-by.png" alt="CC-BY" id="cc-logo">
+				</a>
+				Oliver Pohl, Einführung in die Webprogrammierung (SoSe 2016), Sitzung 07: jQuery Libraries. -- <a href="http://telotadev.bbaw.de/ewp-helper/questions">Anonyme Fragen: http://goo.gl/dDkMeL</a>
+			</div>
+
+		</div>
+
+
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/chart/Chart.min.js' },
+					{ src: 'plugin/chart/csv2chart.js' },
+					{ src: 'plugin/externalcode/externalcode.js'},
+				],
+
+				chart: {
+					defaults: {
+						global: {
+							title: { fontColor: "#000" },
+						},
+						legend: {
+							labels: { fontColor: "#000" },
+						},
+						scale: {
+							scaleLabel: { fontColor: "#000" },
+							gridLines: { color: "#000", zeroLineColor: "#000" },
+							ticks: { fontColor: "#000" },
+						}
+					},
+					line: { borderColor: [ "rgba(20,220,220,.8)" , "rgba(220,120,120,.8)", "rgba(20,120,220,.8)" ], "borderDash": [ [5,10], [0,0] ]},
+					bar: { backgroundColor: [ "rgba(20,220,220,.8)" , "rgba(220,120,120,.8)", "rgba(20,120,220,.8)" ]},
+					pie: { backgroundColor: [ ["rgba(0,0,0,.8)" , "rgba(220,20,20,.8)", "rgba(20,220,20,.8)", "rgba(220,220,20,.8)", "rgba(20,20,220,.8)", "rgba(252,158,206, 0.8)"] ]},
+					radar: { borderColor: [ "rgba(20,220,220,.8)" , "rgba(220,120,120,.8)", "rgba(20,120,220,.8)" ]},
+				},
+
+
+			});
+
+		</script>
+
+
+	</body>
+</html>
