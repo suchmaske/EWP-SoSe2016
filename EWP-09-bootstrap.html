@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="de">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>EWP: git and npm</title>
+
+		<meta name="description" content="Einführung in die Webprogrammierung SoSe 2016. Sitzung 09: bootstrap">
+		<meta name="author" content="Oliver Pohl">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/ibi.css" id="theme">
+		<link rel="stylesheet" href="plugin/font-awesome/css/font-awesome.min.css">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+
+		<script src="js/jquery-1.11.1.min.js"></script>
+		<script src="js/ibi.js"></script>
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+
+				<section>
+
+					<h2>Einführung in die Webprogrammierung</h2>
+					<h4>Sitzung 09: Bootstrap</h4>
+					<h4>Oliver Pohl: <a href="mailto:opohl@bbaw.de">opohl@bbaw.de</a></h4>
+
+				</section>
+
+				<section>
+
+					<section>
+						<h2>Agenda</h2>
+
+						<ul>
+							<li>Warmup</li>
+							<li>Bootstrap</li>
+							<li>Grid &amp; Layout</li>
+							<li>Komponenten</li>
+						</ul>
+					</section>
+
+					<section data-markdown="">
+					    <script>
+							## Warmup
+
+							Bootstrap-Klassen zuordnen
+					    </script>
+					</section>
+
+				</section>
+				
+				<section>
+					
+					<section data-markdown="">
+					    <script>
+					        ## Bootstrap
+					    </script>
+					</section>
+					
+					<section data-markdown="">
+					    <script>
+							## Was ist Bootstrap?
+
+							* CSS-Framework
+							* Responsive Webseiten erstellen
+							* Styles und Funktionen für alltägliche Komponenten
+							* Schnell (halbwegs) ansehliche Webseiten erstellen
+					    </script>
+					</section>
+					
+					<section data-markdown="">
+					    <script>
+							## Warum Bootstrap?
+
+							* Grid-Layout
+							* Wiederverwendung durch andere Bibliotheken
+							* Wiederverwendbare Komponenten
+					    </script>
+					</section>
+					
+					<section data-markdown="">
+					    <script>
+							## Wie einbinden?
+
+							* Manuell herunterladen und einbinden: http://getbootstrap.com/
+							* CDN
+							* npm
+
+							```
+							$ npm install bootstrap
+							```
+					    </script>
+					</section>
+					
+					<section data-markdown="">
+					    <script>
+							## Reihenfolge
+
+							1. jquery
+							2. Bootstrap
+							3. Andere Libraries
+							4. Eigener Codes
+					    </script>
+					</section>
+					
+				</section>
+
+				<section>
+					
+					<section data-markdown="">
+					    <script>
+					        ## Layout &amp; Grid
+					    </script>
+					</section>
+				
+					<section data-markdown="">
+					    <script>
+							## Grid-Layout
+
+							* **xs** (< 768px): Smartphones
+							* **sm** (≥ 768px): Tablet
+							* **md** (≥ 992px): Desktop
+							* **lg** (≥ 1170px): Großer Desktop
+
+							**Layouts automatisch an Gerätetyp anpassen**
+					    </script>
+					</section>
+
+					<section data-markdown="">
+					    <script>
+							## Grid (Desktop)
+
+							* 12 Spalten verfügbar
+							* Spaltenbreite über Bootstrap-Klasse definieren
+								* ```.col-md-1```
+								* ```.col-md-2```
+								* ...
+								* ```.col-md-12```
+
+							[Beispiel](sessions/09/bootstrap-grid-example-md.html)
+
+					    </script>
+					</section>
+					
+					<section data-markdown="">
+					    <script>
+							## Grid (Desktop & Mobile)
+
+							* 12 Spalten pro Grid-Klasse verfügbar
+							* Spaltenbreite für verschiedene Bildschirmgrößen
+								* ```.col-md-4 .col-xs-6```
+								* ```.col-md-6 .col-xs-12```
+								* usw.
+							* Bei Unterschreitung der Mindestbreite: Fallback auf nächstkleinere Klasse
+
+							[Beispiel](sessions/09/bootstrap-grid-example-md-xs.html)
+					    </script>
+					</section>
+					
+				</section>
+				
+
+
+
+
+			</div>
+
+			<div class="footer">
+				<a href="https://creativecommons.org/licenses/by/4.0/">
+					<img src="img/cc-by.png" alt="CC-BY" id="cc-logo">
+				</a>
+				Oliver Pohl, Einführung in die Webprogrammierung (SoSe 2016), Sitzung 09: Bootstrap. -- <a href="http://telotadev.bbaw.de/ewp-helper/questions">Anonyme Fragen: http://goo.gl/dDkMeL</a>
+			</div>
+
+		</div>
+
+
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/chart/Chart.min.js' },
+					{ src: 'plugin/chart/csv2chart.js' },
+					{ src: 'plugin/externalcode/externalcode.js'},
+				],
+
+				chart: {
+					defaults: {
+						global: {
+							title: { fontColor: "#000" },
+						},
+						legend: {
+							labels: { fontColor: "#000" },
+						},
+						scale: {
+							scaleLabel: { fontColor: "#000" },
+							gridLines: { color: "#000", zeroLineColor: "#000" },
+							ticks: { fontColor: "#000" },
+						}
+					},
+					line: { borderColor: [ "rgba(20,220,220,.8)" , "rgba(220,120,120,.8)", "rgba(20,120,220,.8)" ], "borderDash": [ [5,10], [0,0] ]},
+					bar: { backgroundColor: [ "rgba(20,220,220,.8)" , "rgba(220,120,120,.8)", "rgba(20,120,220,.8)" ]},
+					pie: { backgroundColor: [ ["rgba(0,0,0,.8)" , "rgba(220,20,20,.8)", "rgba(20,220,20,.8)", "rgba(220,220,20,.8)", "rgba(20,20,220,.8)", "rgba(252,158,206, 0.8)"] ]},
+					radar: { borderColor: [ "rgba(20,220,220,.8)" , "rgba(220,120,120,.8)", "rgba(20,120,220,.8)" ]},
+				},
+
+
+			});
+
+		</script>
+
+
+	</body>
+</html>

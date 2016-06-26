@@ -1,0 +1,10 @@
+.row {
+    margin: 1em 0;
+
+}
+
+.row > * {
+    background: darkgray;
+    border: 1px solid darkslategray;
+    min-height: 3em;
+}
