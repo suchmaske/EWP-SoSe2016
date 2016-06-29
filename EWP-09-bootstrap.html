@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>EWP: git and npm</title>
+		<title>EWP: Bootstrap</title>
 
 		<meta name="description" content="Einführung in die Webprogrammierung SoSe 2016. Sitzung 09: bootstrap">
 		<meta name="author" content="Oliver Pohl">
@@ -184,11 +184,237 @@
 					    </script>
 					</section>
 					
+					<section data-markdown="">
+					    <script>
+							## Container
+
+							* Zentriert Inhalte auf der Webseite
+							* Macht Elemente responsive
+							* Webseiten-Inhalt soll in den Container
+
+							```
+							<div class="container">
+							  ...
+							</div>
+							```
+
+							[Mit Container](sessions/09/bootstrap-grid-example-md-xs.html) - [Ohne Container](sessions/09/bootstrap-grid-example-md-xs-no-container.html)
+					    </script>
+					</section>
+					
+					<section data-markdown="">
+					    <script>
+							## Übung: Bootstrap-Grid
+
+							[http://goo.gl/MYqyXY](http://jsbin.com/wowuvawiye/edit?html,output)
+					    </script>
+					</section>
+
+					<section>
+
+						<h1>KAHOOT</h1>
+						<h3><a href="http://www.kahoot.it">www.kahoot.it</a></h3>
+
+					</section>
+					
+				</section>
+
+				<section>
+
+					<section data-markdown="">
+					    <script>
+							## Bootstrap Komponenten
+
+							* Jumbotron
+							* Buttons
+							* Collectoins
+							* Glyphicons
+							* (Navbar)
+							* (Dropdowns)
+					    </script>
+					</section>
+
+					<section data-markdown="">
+					    <script>
+							## Jumbotron
+
+							* Große Fläche für Header
+							* Gut für One-Pager-Projekte
+							* Normalerweise
+								* Überschrift
+								* Kurzbeschreibung
+								* Wichtigste Funktionen
+
+							```
+							<div class="container">
+								<div class="jumbotron">
+									<h1>Jumbotron mit Container-Breite</h1>
+								</div>
+							</div>
+							```
+
+							[Jumbotron-Beispiele](sessions/09/bootstrap-jumbotron.html)
+						</script>
+					</section>
+					
+					<section data-markdown="">
+					    <script>
+							## Buttons
+
+							https://getbootstrap.com/css/#buttons
+
+							* Button-Klasses für verschiedene Zwecke
+								* Normal: ```btn btn-default```
+								* Blau: ```btn btn-primary```
+								* Grün: ```btn btn-success```
+								* Gelb: ```btn btn-warning```
+								* Rot: ```btn btn-danger```
+
+							```
+							<button type="button" class="btn btn-success">Success</button>
+							```
+
+							[Button-Beispiele](sessions/09/bootstrap-buttons.html)
+					    </script>
+					</section>
+					
+					<section data-markdown="">
+					    <script>
+							## Glyphicons (& Buttons)
+
+							[Glyphicon-Übersicht](https://getbootstrap.com/components/#glyphicons)
+
+							* Bootstrap-eigene Icons
+							* Verwendung via span-Elemente
+
+							Icon alleine
+							```
+							<span class="glyphicon glyphicon-pencil"></span>
+							```
+
+							Icon im Button
+							```
+							<button type="button" class="btn btn-primary">
+								<span class="glyphicon glyphicon-plus"></span> Add something
+							</button>
+							```
+
+							[Beispiele](sessions/09/bootstrap-glyphicon.html)
+					    </script>
+					</section>
+					
+					<section data-markdown="">
+					    <script>
+							## Übung: Jumbotron, Buttons & Glyphicons
+
+							[http://goo.gl/xXRrz6](http://jsbin.com/sexayevaho/edit?html,output)
+					    </script>
+					</section>
+					
+					<section data-markdown="">
+					    <script>
+							## List-Groups & Badges
+
+							https://getbootstrap.com/components/#list-group
+
+							* Darstellung von Listen
+							* Badges: Kleine Icons
+
+							```
+							<ul class="list-group">
+							  <li class="list-group-item">
+								<span class="badge">3</span>
+								Äpfel
+							  </li>
+							</ul>
+							```
+
+							[Beispiel](sessions/09/bootstrap-lists.html)
+					    </script>
+					</section>
+
+					<section data-markdown="">
+					    <script>
+							## Navbar
+
+							https://getbootstrap.com/components/#navbar
+
+							* Navigationsleiste
+							* Webseitenbereiche & Funktionen auflisten
+							* Außerhalb oder innerhalb des Containers
+
+
+							```
+							<nav class="navbar navbar-default">
+								<div class="container-fluid">
+									<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+										<ul class="nav navbar-nav">
+											<li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+											<li><a href="#">Link</a></li>
+										</ul>
+									</div>
+								</div>
+							</nav>
+							```
+
+							[Beispiel](sessions/09/bootstrap-navbar.html)
+					    </script>
+					</section>
+
+					<section data-markdown="">
+					    <script>
+							## Dropdown-Buttons
+
+							https://getbootstrap.com/components/#btn-dropdowns
+
+							* Bei Klick: mehr Optionen
+							* Button(s) in button-group-div
+
+							```
+							<div class="btn-group">
+							  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								Action <span class="caret"></span>
+							  </button>
+							  <ul class="dropdown-menu">
+								<li><a href="#">Action</a></li>
+								<li><a href="#">Another action</a></li>
+								<li><a href="#">Something else here</a></li>
+								<li role="separator" class="divider"></li>
+								<li><a href="#">Separated link</a></li>
+							  </ul>
+							</div>
+							```
+
+							[Beispiel](sessions/09/bootstrap-dropdown-button.html)
+					    </script>
+					</section>
+
+				</section>
+
+				<section>
+
+					<section>
+
+					    <h2>Hausaufgabe 17</h2>
+
+						<ul>
+							<li>Ratespiel in Bootstrap implementieren</li>
+							<li>Entsprechende Bootstrap-Klassen nutzen</li>
+							<li>Klassen und jQuery-Funktionen selbst recherchieren</li>
+							<li>Bonus: Responsiveness erzeugen</li>
+						</ul>
+
+					</section>
+
+
+					<section data-markdown="">
+					    <script>
+					        ## 14.07. - Keine Sitzung
+					    </script>
+					</section>
+
 				</section>
 				
-
-
-
 
 			</div>
 
