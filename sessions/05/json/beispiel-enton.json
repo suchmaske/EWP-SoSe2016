@@ -1,5 +1,5 @@
 {
-  pokedex: "054",
-  name : "Enton",
-  typ : "Wasser"
+  "pokedex": "054",
+  "name" : "Enton",
+  "typ" : "Wasser"
 }

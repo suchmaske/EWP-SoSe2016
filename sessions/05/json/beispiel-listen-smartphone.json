@@ -1,7 +1,7 @@
 {
-  name: "Sumsang Galaxy S49",
-  preis: 699,
-  farben: [
+  "name": "Sumsang Galaxy S49",
+  "preis": 699,
+  "farben": [
     "schwarz",
     "silber",
     "rosegold"

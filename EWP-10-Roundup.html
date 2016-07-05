@@ -1,0 +1,1065 @@
+<!doctype html>
+<html lang="de">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>EWP: Roundup</title>
+
+		<meta name="description" content="Einführung in die Webprogrammierung SoSe 2016. Sitzung 10: Roundup">
+		<meta name="author" content="Oliver Pohl">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/ibi.css" id="theme">
+		<link rel="stylesheet" href="plugin/font-awesome/css/font-awesome.min.css">
+		<link rel="stylesheet" href="css/theme/04-flexbox-example.css">
+		<link rel="stylesheet" href="css/theme/04-flexbox-flex-n.css">
+		<link rel="stylesheet" href="css/theme/04-flexbox-justify-align.css">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+
+		<script src="js/jquery-1.11.1.min.js"></script>
+		<script src="js/ibi.js"></script>
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+
+				<section>
+
+					<h2>Einführung in die Webprogrammierung</h2>
+					<h4>Sitzung 10: Roundup</h4>
+					<h4>Oliver Pohl: <a href="mailto:opohl@bbaw.de">opohl@bbaw.de</a></h4>
+
+				</section>
+
+				<section>
+
+					<section>
+
+						<h2>Agenda</h2>
+
+						<ul>
+							<li>Fragen</li>
+							<li>Roundup</li>
+							<li>Kahoot</li>
+							<li>Evaluation</li>
+							<li>Siegerehrung</li>
+						</ul>
+
+					</section>
+
+					<section>
+
+					    <h2>Fragen?</h2>
+
+					</section>
+
+				</section>
+
+
+				<section data-markdown="">
+					<script>
+						## Roundup
+					</script>
+				</section>
+
+				<section>
+
+					<section data-markdown="">
+						<script>
+							## HTML
+						</script>
+					</section>
+
+					<section>
+						<h2>Elemente?</h2>
+						<p>Dokument Struktur verleihen</p>
+						<p>HTML-Bausteine aus 3 Bestandteilen</p>
+
+						<table>
+							<thead>
+							<tr>
+								<th>Start-Tag</th>
+								<th>Inhalt</th>
+								<th>End-Tag</th>
+							</tr>
+							</thead>
+							<tbody>
+							<tr>
+								<td>&lt;h1&gt;</td>
+								<td>Überschrift 1</td>
+								<td>&lt;/h1&gt;</td>
+							</tr>
+							<tr>
+								<td>&lt;p&gt;</td>
+								<td>Absatz</td>
+								<td>&lt;/p&gt;</td>
+							</tr>
+							</tbody>
+						</table>
+
+					</section>
+
+
+					<section>
+
+						<h2>Struktur, Darstellung, Funktion</h2>
+
+						<table>
+							<thead>
+							<tr>
+								<th>Typ</th>
+								<th>Technologie</th>
+								<th></th>
+							</tr>
+							</thead>
+							<tbody>
+							<tr>
+								<td>Struktur</td>
+								<td>HTML</td>
+								<td>HyperText Markup Language</td>
+							</tr>
+							<tr>
+								<td>Darstellung</td>
+								<td>CSS</td>
+								<td>Cascading Stylesheets</td>
+							</tr>
+							<tr>
+								<td>Funktion</td>
+								<td>JS</td>
+								<td>JavaScript</td>
+							</tr>
+							</tbody>
+						</table>
+
+					</section>
+
+					<section>
+
+						<h2>Attribute</h2>
+
+						<p>Bereits gelernt: href, src</p>
+
+						<p>Zusatzinformation im HTML-Element</p>
+
+						<pre><code class="Code--html" data-trim data-noescape>
+<a href="www.hu-berlin.de">
+  <img src="img/hu-logo-small.png">
+</a>
+						</code></pre>
+
+						<table>
+							<thead>
+							<tr>
+								<th>Element</th>
+								<th>Attributsname</th>
+								<th>Attributswert</th>
+							</tr>
+							</thead>
+							<tbody>
+							<tr>
+								<td>a</td>
+								<td>href</td>
+								<td>www.hu-berlin.de</td>
+							</tr>
+							<tr>
+								<td>img</td>
+								<td>src</td>
+								<td>img/hu-logo-small.png</td>
+							</tr>
+							</tbody>
+						</table>
+
+						<b>attributsname="attributswert"</b>
+
+					</section>
+
+				</section>
+
+				<section>
+
+					<section data-markdown="">
+					    <script>
+					        ## Terminal
+					    </script>
+					</section>
+
+					<section>
+
+						<h2>ls - Verzeichnisinhalt anzeigen</h2>
+
+						<pre><code>$ ls</code>Zeigt aktuellen Verzeichnisinhalt an</pre>
+
+						<pre><code>$ ls
+Bilder
+Dokumente
+Downloads
+Musik
+Projekte
+Schreibtisch
+Videos</code></pre>
+
+						<pre><code>$ ls Bilder
+Urlaub
+Katzen.png
+Hund.jpg
+						</code>Zeigt Verzeichnisinhalt im Bilder-Verzeichnis an</pre>
+
+					</section>
+
+					<section>
+
+						<h2>cd - Verzeichnis wechseln</h2>
+
+						<h3>Change Directory</h3>
+
+						<pre><code>$ cd Bilder</code>Ins Bilder-Verzeichnis wechseln</pre>
+
+						<pre><code>$ cd ..</code>Ins übergeordnete Verzeichnis zurückwechseln</pre>
+
+						<pre><code>$ cd ~</code>Ins Home-Verzeichnis zurückwechseln</pre>
+
+
+					</section>
+
+					<section>
+
+						<h2>cp - Kopieren</h2>
+
+						<h3>Copy</h3>
+
+						<pre><code>$ ls
+Urlaub
+Katzen.png
+Hund.jpg
+						</code>Zeigt Verzeichnisinhalt im Bilder-Verzeichnis an</pre>
+
+						<pre><code>$ cp Hund.jpg WauWau.jpg</code>Kopiert Hund.jpg und benennt die Kopie WauWau.jpg</pre>
+
+						<pre><code>$ cp Hund.jpg ../</code>Kopiert Hund.jpg ins übergeordnete Verzeichnis (ohne Umbennenung)</pre>
+
+					</section>
+
+					<section>
+
+						<h2>mv - Verschieben und Umbenennen</h2>
+
+						<h3>Move</h3>
+
+						<pre><code>$ mv Hund.jpg Urlaub/</code>Verschiebt Hund.jpg ins Urlaub-Verzeichnis</pre>
+
+						<pre><code>$ mv Katzen.png Miau.png</code>Benennt Katzen.png in Miau.png um</pre>
+
+						<pre><code>$ mv * Urlaub</code>Verschiebt alle Dateien ins Urlaub-Verzeichnis</pre>
+
+						<pre><code>$ mv *.png ../</code>Verschiebt alle PNG-Dateien ins übergeordnete Verzeichnis</pre>
+
+
+					</section>
+
+					<section>
+
+						<h2>mkdir - Verzeichnis erstellen</h2>
+
+						<h3>Make Directory</h3>
+
+						<pre><code>$ ls
+Urlaub
+Katzen.png
+Hund.jpg</code>Zeigt Verzeichnisinhalt im Bilder-Verzeichnis an</pre>
+
+						<pre><code>$ mkdir Tiere</code>Erstellt Tiere-Verzeichnis</pre>
+
+						<pre><code>$ ls
+Tiere
+Urlaub
+Katzen.png
+Hund.jpg</code></pre>
+
+						<pre><code>$ mv Hund.jpg Katzen.jpg Tiere/</code>Verschiebt die Bilder ins Tiere-Verzeichnis</pre>
+
+					</section>
+
+					<section>
+
+						<h2>rm - Löschen</h2>
+
+						<h3>Remove</h3>
+
+						<pre><code>$ rm Katzen.png</code>Löscht Katzen.png</pre>
+
+						<pre><code>$ rm -r Tiere</code>Löscht das Tierverzeichnis rekursiv</pre>
+
+					</section>
+
+					<section>
+
+						<h2>less - Textdateien ansehen</h2>
+
+						<pre><code>$ less index.html</code>Zeigt Inhalt von index.html an</pre>
+
+						<hr>
+
+						<h3>Navigation</h3>
+
+						<table>
+							<thead>
+							<th>Taste</th>
+							<th>Wirkung</th>
+							</thead>
+							<tbody>
+							<tr>
+								<td>J</td>
+								<td>Nach unten scrollen</td>
+							</tr>
+							<tr>
+								<td>K</td>
+								<td>Nach oben scrollen</td>
+							</tr>
+							<tr>
+								<td>Q</td>
+								<td>Beenden</td>
+							</tr>
+							</tbody>
+						</table>
+
+					</section>
+
+				</section>
+				
+				<section>
+					
+					<section data-markdown="">
+					    <script>
+					        ## CSS
+					    </script>
+					</section>
+
+					<section>
+
+						<h2>CSS-Syntax</h2>
+
+						<pre><code>selektor { gestaltungsattribut: wert; }</code>Grundlegende CSS Syntax</pre>
+
+
+						<h3>Beispiel</h3>
+
+						<pre><code data-trim data-noescape>
+div {
+  background-color: red;
+  color: white;
+  margin: 10px;
+}
+						</code>Die Hintergrundfarbe für alle div-Elemente ist rot.
+Texte in divs haben eine weiße Schrift.
+Divs haben einen äußeren Abstand von 10 Pixeln zu allen Seiten.</pre>
+
+					</section>
+
+					<section>
+
+						<h2>CSS in Datei</h2>
+
+						<p>Ausgelagert in externe Datei und ins HTML-Dokument einbinden</p>
+
+						<pre><code data-trim>
+div {
+  color: white;
+  background-color: red;
+}
+						</code>Ausgelagerte CSS-Datei: styles.css</pre>
+
+						<div class="Code-Example Code-Example--html">
+							<div class="Code-Example__Code">
+									<pre>
+<code>&lt;html&gt;
+  &lt;head&gt;
+    &lt;link rel="stylesheet" href="styles.css"&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div&gt;A&lt;/div&gt;
+    &lt;div&gt;B&lt;/div&gt;
+    &lt;div&gt;C&lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code>CSS im Head</pre>
+							</div>
+
+							<div class="Code-Example__Result">
+
+								<div style="color: white; background-color: red;">A</div>
+								<div style="color: white; background-color: red;">B</div>
+								<div style="color: white; background-color: red;">C</div>
+
+							</div>
+
+						</div>
+
+					</section>
+
+					<section>
+
+						<h2>Einbindungsmöglichkeiten</h2>
+
+						<table>
+							<thead>
+							<tr>
+								<th></th>
+								<th>Inline</th>
+								<th>Head</th>
+								<th>Extern</th>
+							</tr>
+							</thead>
+							<tbody>
+							<tr>
+								<td>Trennung zu HTML</td>
+								<td><i class="fa fa-frown-o"></i></td>
+								<td><i class="fa fa-meh-o"></i></td>
+								<td><i class="fa fa-smile-o"></i></td>
+							</tr>
+							<tr>
+								<td>Lesbarkeit</td>
+								<td><i class="fa fa-frown-o"></i></td>
+								<td><i class="fa fa-smile-o"></i></td>
+								<td><i class="fa fa-smile-o"></i></td>
+							</tr>
+							<tr>
+								<td>Nutzbarkeit in Projekten</td>
+								<td><i class="fa fa-frown-o"></i></td>
+								<td><i class="fa fa-frown-o"></i></td>
+								<td><i class="fa fa-smile-o"></i></td>
+							</tr>
+							<tr>
+								<td>Fazit</td>
+								<td><i class="fa fa-frown-o"></i></td>
+								<td><i class="fa fa-meh-o"></i></td>
+								<td><i class="fa fa-smile-o"></i></td>
+							</tr>
+							</tbody>
+						</table>
+
+					</section>
+
+				</section>
+
+				<section>
+
+					<section>
+					    <h2>BEM &amp; Flexbox</h2>
+					</section>
+
+					<section>
+
+						<h2>Block Entity Modifier</h2>
+
+						<ul>
+							<li>Block: Wiederkehrende Komponente
+								<ul>
+									<li>Suchtreffer</li>
+									<li>Info-Boxen</li>
+									<li>Overlays</li>
+								</ul>
+							</li>
+							<li>Entity: Teilelement in dieser Komponente
+								<ul>
+									<li>Titel vom Treffer</li>
+									<li>Metadaten</li>
+									<li>Links</li>
+								</ul>
+							</li>
+							<li>Modifier: Alternativer Status der Komponente
+								<ul>
+									<li>Bereits angeklickt</li>
+									<li>Zugriff nicht möglich</li>
+									<li>Verliehen</li>
+								</ul>
+							</li>
+
+						</ul>
+
+					</section>
+
+					<section>
+
+						<h2>BEM: Entities</h2>
+
+						<img src="assets/BEM/BEM-example-element.png" alt="">
+
+						<div>
+							<ul>
+								<li><code style="color: red;">.Suchtreffer__Titel</code></li>
+								<li><code style="color: green;">.Suchtreffer__Link</code></li>
+								<li><code style="color: blue;">.Suchtreffer__Translate</code></li>
+								<li><code>.Suchtreffer__Snippet</code></li>
+								<li><code style="color: violet;">.Suchtreffer__Visited_at</code></li>
+							</ul>
+						</div>
+
+					</section>
+
+					<section>
+
+						<h2>BEM: Modifier</h2>
+
+						<img src="assets/BEM/BEM-example-modifier.png" alt="">
+
+						<div>
+							<ul>
+								<li>Alternativer Status: <code style="color: purple">.Suchtreffer--Visited</code></li>
+								<li>Normaler Status: <code style="">.Suchtreffer</code></li>
+							</ul>
+						</div>
+
+					</section>
+
+					<section>
+
+						<h2>Flexbox: Beispiel</h2>
+
+						<div class="Flex-Container Flex-Container--main">
+
+							<div class="Flex-Container__Child"></div>
+							<div class="Flex-Container__Child Flex-Container--column">
+
+								<div class="Flex-Container__Child"></div>
+								<div class="Flex-Container__Child Flex-Container">
+									<div class="Flex-Container__Child teal"></div>
+									<div class="Flex-Container__Child teal"></div>
+									<div class="Flex-Container__Child teal"></div>
+								</div>
+								<div class="Flex-Container__Child Flex-Container">
+
+									<div class="Flex-Container__Child teal"></div>
+									<div class="Flex-Container__Child teal"></div>
+
+								</div>
+
+							</div>
+
+						</div>
+
+						<pre><code data-code="./sessions/04/flexbox-example.html"></code></pre>
+
+					</section>
+
+					<section>
+
+						<h2>Flexbox Aufbau</h2>
+
+						<pre><code data-code="./sessions/04/flexbox-example.html" class="Code-Example--small"></code></pre>
+
+						<pre><code data-code="./css/theme/04-flexbox-aufbau.css" class="Code-Example--small"></code></pre>
+
+					</section>
+
+
+				</section>
+
+				<section>
+
+					<section>
+
+					    <h2>JSON</h2>
+
+					</section>
+
+					<section>
+
+						<h2>JSON - Syntax</h2>
+
+						<p>Key-Value-Prinzip</p>
+
+						<pre><code data-code="./sessions/05/json/einfache-syntax.json"></code>Einfache JSON-Syntax</pre>
+
+						<ul>
+							<li>Alle Daten müssen von {} umschlossen sein</li>
+							<li>Keys <strong>müssen</strong> in Anführungszeichen stehen</li>
+							<li>Values <strong>müssen</strong> in Anführungszeichen stehen, außer sie sind Zahlen</li>
+							<li>Nach jedem Key-Value-Pair folgt ein Komma, außer beim letzten</li>
+							<li>Zur Leserlichkeit: Key-Value-Pairs einrücken</li>
+						</ul>
+
+					</section>
+
+					<section>
+
+						<h2>Liste an Werten in JSON</h2>
+
+						<pre><code data-code="./sessions/05/json/beispiel-listen-smartphone.json"></code></pre>
+
+						<ul>
+							<li>Werte in einer Liste können einfache Werte, weitere Listen oder JSON-Objekte sein</li>
+							<li>Aber: Zur Übersicht und Funktionalität sollte der Datentyp gleich sein</li>
+						</ul>
+
+
+					</section>
+
+					<section>
+
+						<h2>Geschachtelte Strukturen in JSON</h2>
+
+						<pre><code data-code="./sessions/05/json/beispiel-objekt-person.json"></code></pre>
+
+						<ul>
+							<li>JSON-Objekte können beliebig tief geschachtelt werden</li>
+						</ul>
+
+					</section>
+
+				</section>
+
+				<section>
+
+					<section>
+
+						<h2>JavaScript</h2>
+
+					</section>
+
+					<section>
+
+						<h2>Einbindung Extern (im Body)</h2>
+
+						<pre><code data-code="./sessions/06/JS-Extern-body.html"></code>Ein HTML-Dokument</pre>
+
+						<pre><code data-code="./sessions/06/JS-Extern-body.js"></code>Inhalt von my.js (im Body referenziert)</pre>
+
+						<ul>
+							<li>Verlinkung am Ende des Bodys ist besser</li>
+							<li>DOM-Zugriff direkt möglich</li>
+							<li>Daher keine extra-Befehle nötig</li>
+						</ul>
+
+					</section>
+
+					<section>
+
+						<h2>JavaScript vs. jQuery</h2>
+
+						<pre><code data-code="./sessions/06/JS-js-vs-jquery-js.js"></code>Element in Variable speichern (reines JavaScript)</pre>
+						<pre><code data-code="./sessions/06/JS-js-vs-jquery-jquery.js"></code>Element in Variable speichern (jQuery)</pre>
+
+
+						<ul>
+							<li>Gleiche Selektor-Syntax wie CSS </li>
+							<li>Gleiche Hierarchien</li>
+							<li>Einfachere Syntax</li>
+							<li><pre><code>$("button") == jquery("button")</code></pre></li>
+						</ul>
+
+					</section>
+
+					<section data-markdown="">
+						<script>
+							## Daten auslesen und schreiben
+
+							Textinhalt aus dem Button-Element auslesen
+
+							```
+							<button>Hallo!</button>
+							```
+
+							```
+							let btnText = $("button").text();
+							// btnText = "Hallo!"
+							```
+
+							Textinhalt des Button-Elements ändern
+
+							```
+							$("button").text("Please don't click me!");
+							```
+
+							```
+							<button>Please don't click me!"</button>
+							```
+
+						</script>
+					</section>
+
+					<section data-markdown="">
+						<script>
+							## Variablen Deklaration Beispiel
+
+							```
+							let numberOfBalls = 3;
+							let myName = "Oliver Pohl";
+							let isDozent = true;
+							```
+						</script>
+					</section>
+
+					<section data-markdown="">
+						<script>
+							## if, else if, else
+
+							```
+							let i = 3;
+
+							if (i == 4)
+							{
+								console.log("i ist 4");
+							}
+
+							else if (i == 3)
+							{
+								console.log("i ist 3");
+							}
+
+							else
+							{
+								console.log("i ist etwas anderes als 3 oder 4");
+							}
+							```
+						</script>
+					</section>
+
+					<section>
+
+						<h2>Button Click</h2>
+
+						<p>Element via jQuery auswählen</p>
+
+						<pre><code data-code="./sessions/06/JS-Button-Click.js"></code></pre>
+
+					</section>
+
+				</section>
+
+				<section>
+
+					<section>
+
+						<h2>jQuery Libraries</h2>
+
+					</section>
+
+					<section data-markdown="">
+						<script>
+							## Wie einbinden?
+
+							* Die meisten Libraries benötigen jQuery
+							* jQuery muss vor der Library geladen werden
+
+							*Reihenfolge*:
+							* jQuery
+							* Libraries
+							* Eigener Code
+						</script>
+					</section>
+
+					<section>
+
+						<h2>DataTables: Initialisierung</h2>
+
+						<pre><code data-code="sessions/07/datatables/dataTables-beispiel-code.html"></code>HTML-Seite mit Tabelle</pre>
+
+						<pre><code data-code="sessions/07/datatables/js/dataTables-beispiel-live.js"></code>Inhalt von my.js</pre>
+
+					</section>
+
+					<section>
+
+						<h2>DataTables via JSON-Datei</h2>
+
+						<pre><code data-code="sessions/07/datatables/js/dataTables-json-live.js"></code>Inhalt von my.js</pre>
+
+						<pre><code data-code="sessions/07/datatables/data/pokemon.json"></code>Inhalt von pokemon.json</pre>
+
+					</section>
+
+					<section>
+
+						<h2>Tooltipster: Einfaches Beispiel</h2>
+
+						<pre><code data-code="sessions/07/tooltipster/tooltipster-beispiel-code.html"></code></pre>
+
+						<pre><code data-code="sessions/07/tooltipster/js/tooltipster-beispiel-live.js"></code></pre>
+
+						<p><a href="sessions/07/tooltipster/tooltipster-beispiel-live.html" target="_blank">Resultat</a></p>
+
+					</section>
+
+					<section>
+
+						<h2>Tooltipster: HTML-Tooltip</h2>
+
+						<pre><code data-code="sessions/07/tooltipster/tooltipster-html-code.html"></code></pre>
+
+						<pre><code data-code="sessions/07/tooltipster/js/tooltipster-html-live.js"></code></pre>
+
+					</section>
+
+				</section>
+
+				<section>
+
+
+					<section>
+
+						<h2>git &amp; npm</h2>
+
+					</section>
+
+					<section data-markdown="" class="small-table">
+						<script>
+							## Einfacher Workflow
+							| **Befehl**       | **Nutzen**                          | **Von**       | **Nach**      |
+							|:-----------------|
+							| ```git init```   | Zentrales Repository initialisieren | Remote Origin |               |
+							| ```git clone```  | Repository duplizieren              | Remote Origin | Working Dir   |
+							||
+							| ```git add```    | Änderungen hinzufügen/vermerken     | Working Dir   | Staging       |
+							| ```git commit``` | Änderungen lokal abspeichern        | Staging       | Lokales .git  |
+							| ```git push```   | Änderungen hochladen                | Lokales .git  | Remote Origin |
+
+							Tutorial: https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow
+						</script>
+					</section>
+
+					<section data-markdown="">
+						<script>
+							## Dateien ignorieren: .gitignore
+
+							* Nicht alle Dateien sollen nachverfolgt werden
+							* Beispiel: ```node_modules``` (JS- und CSS-Abhängigkeiten)
+							* Im Projektverzeichnis die Datei ```.gitignore``` anlegen
+							* Dateien und Verzeichnisse auflisten, die ignoriert werden sollen
+
+							Inhalt von .gitignore
+							```
+							ignoreMe.txt
+							node_modules/*
+							```
+						</script>
+					</section>
+
+					<section data-markdown="">
+						<script>
+							## npm: Anwendung
+
+							Inhalt von package.json ohne Abhängigkeiten
+							```
+							{}
+							```
+
+							jQuery installieren und Abhängigkeit merken
+							```
+							$ npm install jquery --save
+							```
+
+							Inhalt von package.json mit Abhängkeiten
+							```
+							{
+							  "dependencies": {
+								"jquery": "^3.0.0"
+							  }
+							}
+							```
+						</script>
+					</section>
+
+				</section>
+
+				<section>
+
+					<section>
+						<h2>Bootstrap</h2>
+					</section>
+
+					<section data-markdown="">
+						<script>
+							## Grid-Layout
+
+							* **xs** (< 768px): Smartphones
+							* **sm** (≥ 768px): Tablet
+							* **md** (≥ 992px): Desktop
+							* **lg** (≥ 1170px): Großer Desktop
+
+							**Layouts automatisch an Gerätetyp anpassen**
+						</script>
+					</section>
+
+					<section data-markdown="">
+						<script>
+							## Grid (Desktop & Mobile)
+
+							* 12 Spalten pro Grid-Klasse verfügbar
+							* Spaltenbreite für verschiedene Bildschirmgrößen
+							* ```.col-md-4 .col-xs-6```
+							* ```.col-md-6 .col-xs-12```
+							* usw.
+							* Bei Unterschreitung der Mindestbreite: Fallback auf nächstkleinere Klasse
+
+									[Beispiel](sessions/09/bootstrap-grid-example-md-xs.html)
+						</script>
+					</section>
+
+					<section data-markdown="">
+						<script>
+							## Glyphicons (& Buttons)
+
+							[Glyphicon-Übersicht](https://getbootstrap.com/components/#glyphicons)
+
+							* Bootstrap-eigene Icons
+							* Verwendung via span-Elemente
+
+							Icon alleine
+							```
+							<span class="glyphicon glyphicon-pencil"></span>
+							```
+
+							Icon im Button
+							```
+							<button type="button" class="btn btn-primary">
+								<span class="glyphicon glyphicon-plus"></span> Add something
+							</button>
+							```
+
+							[Beispiele](sessions/09/bootstrap-glyphicon.html)
+						</script>
+					</section>
+
+					<section data-markdown="">
+						<script>
+							## List-Groups & Badges
+
+							https://getbootstrap.com/components/#list-group
+
+							* Darstellung von Listen
+							* Badges: Kleine Icons
+
+							```
+							<ul class="list-group">
+							  <li class="list-group-item">
+								<span class="badge">3</span>
+								Äpfel
+							  </li>
+							</ul>
+							```
+
+							[Beispiel](sessions/09/bootstrap-lists.html)
+						</script>
+					</section>
+
+				</section>
+
+				<section>
+
+					<h1>KAHOOT</h1>
+					<h3><a href="http://www.kahoot.it">www.kahoot.it</a></h3>
+
+				</section>
+
+				<section>
+
+					<h2>Evaluation</h2>
+
+				</section>
+
+				<section>
+
+					<h2>Siegerehrung</h2>
+
+				</section>
+
+				<section>
+
+					<h2>Dankeschön</h2>
+
+				</section>
+
+			</div>
+
+			<div class="footer">
+				<a href="https://creativecommons.org/licenses/by/4.0/">
+					<img src="img/cc-by.png" alt="CC-BY" id="cc-logo">
+				</a>
+				Oliver Pohl, Einführung in die Webprogrammierung (SoSe 2016), Sitzung 10: Roundup. -- <a href="http://telotadev.bbaw.de/ewp-helper/questions">Anonyme Fragen: http://goo.gl/dDkMeL</a>
+			</div>
+
+		</div>
+
+
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/chart/Chart.min.js' },
+					{ src: 'plugin/chart/csv2chart.js' },
+					{ src: 'plugin/externalcode/externalcode.js'},
+				],
+
+				chart: {
+					defaults: {
+						global: {
+							title: { fontColor: "#000" },
+						},
+						legend: {
+							labels: { fontColor: "#000" },
+						},
+						scale: {
+							scaleLabel: { fontColor: "#000" },
+							gridLines: { color: "#000", zeroLineColor: "#000" },
+							ticks: { fontColor: "#000" },
+						}
+					},
+					line: { borderColor: [ "rgba(20,220,220,.8)" , "rgba(220,120,120,.8)", "rgba(20,120,220,.8)" ], "borderDash": [ [5,10], [0,0] ]},
+					bar: { backgroundColor: [ "rgba(20,220,220,.8)" , "rgba(220,120,120,.8)", "rgba(20,120,220,.8)" ]},
+					pie: { backgroundColor: [ ["rgba(0,0,0,.8)" , "rgba(220,20,20,.8)", "rgba(20,220,20,.8)", "rgba(220,220,20,.8)", "rgba(20,20,220,.8)", "rgba(252,158,206, 0.8)"] ]},
+					radar: { borderColor: [ "rgba(20,220,220,.8)" , "rgba(220,120,120,.8)", "rgba(20,120,220,.8)" ]},
+				},
+
+
+			});
+
+		</script>
+
+
+	</body>
+</html>
